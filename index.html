@@ -1,0 +1,2165 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chasing Sun Africa — From African Farmers to Global Markets</title>
+    <meta
+      name="description"
+      content="Chasing Sun Africa is a Nairobi-based agribusiness growing greenhouse horticulture between Mount Longonot and Lake Naivasha, and sourcing verified, quality-checked crops for buyers across Africa, the Middle East and beyond."
+    />
+
+    <meta
+      property="og:title"
+      content="Chasing Sun Africa — From African Farmers to Global Markets"
+    />
+    <meta
+      property="og:description"
+      content="Greenhouse horticulture, commodity trading, livestock and agri-tech — produced with purpose, traceable to the grower."
+    />
+    <meta property="og:image" content="images/greenhouse/IMG_3150.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="images/greenhouse/IMG_3150.jpg" />
+
+    <link rel="icon" href="images/greenhouse/CHASING-SUN.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              olive: "#6a961f",
+              gold: "#fab935",
+              teal: {
+                DEFAULT: "#177165",
+                mid: "#2c604a",
+                dark: "#0a312c",
+                light: "#a4d6cf",
+                pale: "#e1f4f2",
+              },
+              cream: "#f8f2e6",
+              muted: "#777777",
+              soft: "#efefef",
+            },
+            fontFamily: {
+              heading: ['"Playfair Display"', "Georgia", "serif"],
+              body: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+            },
+            /* One fluid type scale for the whole page. Each step interpolates
+           between its mobile and desktop size, so the headings stop
+           jumping at breakpoints and the ratio between them holds. */
+            fontSize: {
+              display: [
+                "clamp(2.25rem, 1.30rem + 4.20vw, 4.25rem)",
+                { lineHeight: "1.04", letterSpacing: "-0.022em" },
+              ],
+              h2: [
+                "clamp(1.75rem, 1.22rem + 2.35vw, 2.875rem)",
+                { lineHeight: "1.14", letterSpacing: "-0.018em" },
+              ],
+              h3: [
+                "clamp(1.5rem, 1.24rem + 1.15vw, 2.0625rem)",
+                { lineHeight: "1.2", letterSpacing: "-0.015em" },
+              ],
+              h4: [
+                "clamp(1.25rem, 1.13rem + 0.52vw, 1.5rem)",
+                { lineHeight: "1.28", letterSpacing: "-0.012em" },
+              ],
+              h5: [
+                "clamp(1.125rem, 1.07rem + 0.24vw, 1.25rem)",
+                { lineHeight: "1.35", letterSpacing: "-0.008em" },
+              ],
+              /* Uppercase section eyebrow — small, but widely tracked so it
+             reads as a label rather than shrunken body copy. */
+              eyebrow: [
+                "0.8125rem",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.14em",
+                  fontWeight: "500",
+                },
+              ],
+              lead: [
+                "clamp(1.0625rem, 1.01rem + 0.24vw, 1.1875rem)",
+                { lineHeight: "1.65" },
+              ],
+              stat: [
+                "clamp(1.375rem, 1.20rem + 0.75vw, 1.75rem)",
+                { lineHeight: "1.2", letterSpacing: "-0.015em" },
+              ],
+            },
+            keyframes: {
+              heroFade: {
+                "0%, 45%": { opacity: "0" },
+                "55%, 95%": { opacity: "1" },
+                "100%": { opacity: "0" },
+              },
+              ripple: {
+                "0%": { transform: "scale(1)", opacity: "0.6" },
+                "100%": { transform: "scale(1.6)", opacity: "0" },
+              },
+            },
+            animation: {
+              heroFade: "heroFade 14s ease-in-out infinite",
+              ripple: "ripple 2.4s ease-out infinite",
+              ripple2: "ripple 2.4s ease-out 1.2s infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      /* Hide the native scrollbar on the CSS-only snap carousels (they stay
+     keyboard- and drag-scrollable, the bar is just visual noise). */
+      .no-scrollbar {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Playfair sets very loose by default at display sizes — pull the
+     tracking in as the type gets bigger so headlines read as one shape. */
+      .font-heading {
+        letter-spacing: -0.015em;
+        font-feature-settings:
+          "kern" 1,
+          "liga" 1;
+      }
+
+      /* Keep headlines from breaking with one orphan word on the last line,
+     and body copy from leaving a single word alone. */
+      h1,
+      h2,
+      h3 {
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+
+      /* Roboto's default figures are proportional; tabular keeps the stat
+     rows and phone numbers from shifting. */
+      .nums {
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* Motion system: composited transforms keep the entrance animation
+         smooth, while IntersectionObserver avoids doing work during scroll. */
+      .motion-item {
+        opacity: 0;
+        transform: translate3d(0, 38px, 0);
+        filter: blur(5px);
+        transition:
+          opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+          filter 700ms ease;
+        transition-delay: var(--motion-delay, 0ms);
+        will-change: opacity, transform;
+      }
+
+      .motion-item[data-motion="left"] {
+        transform: translate3d(-44px, 0, 0);
+      }
+
+      .motion-item[data-motion="right"] {
+        transform: translate3d(44px, 0, 0);
+      }
+
+      .motion-item[data-motion="scale"] {
+        transform: scale(0.965);
+      }
+
+      .motion-item.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+        filter: blur(0);
+      }
+
+      .hero-load {
+        opacity: 0;
+        transform: translate3d(0, 24px, 0);
+        animation: heroEntrance 900ms cubic-bezier(0.22, 1, 0.36, 1)
+          forwards;
+        animation-delay: var(--hero-delay, 0ms);
+      }
+
+      .hero-image-load {
+        animation: heroImageEntrance 1.6s cubic-bezier(0.22, 1, 0.36, 1)
+          both;
+      }
+
+      @keyframes heroEntrance {
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes heroImageEntrance {
+        from {
+          opacity: 0;
+          transform: scale(1.045);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto !important;
+        }
+
+        .motion-item,
+        .hero-load,
+        .hero-image-load {
+          opacity: 1 !important;
+          transform: none !important;
+          filter: none !important;
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    id="top"
+    class="overflow-x-hidden bg-white font-body text-[17px] leading-[1.7] tracking-[0.003em] text-muted antialiased"
+  >
+    <!-- ============================ HEADER ============================ -->
+    <header
+      class="absolute top-0 z-20 w-full bg-[linear-gradient(180deg,#fff,#fff_85%,rgba(255,255,255,0))]"
+    >
+      <div class="px-5 2xl:px-[60px]">
+        <div class="flex items-center justify-between gap-4">
+          <!-- Logo -->
+          <div class="shrink-0 py-5 lg:py-0">
+            <a
+              href="#top"
+              class="inline-flex items-center gap-2.5"
+              aria-label="Chasing Sun Africa — home"
+            >
+              <img
+                src="images/greenhouse/CHASING-SUN.webp"
+                alt="Chasing Sun Africa"
+                class="h-16 w-auto object-contain sm:h-20"
+              />
+            </a>
+          </div>
+
+          <!-- Nav toggle state (CSS-only off-canvas menu) -->
+          <input type="checkbox" id="nav-toggle" class="peer hidden" />
+
+          <!-- Backdrop -->
+          <label
+            for="nav-toggle"
+            aria-hidden="true"
+            class="fixed inset-0 z-[66] hidden bg-black/50 peer-checked:block lg:peer-checked:hidden"
+          ></label>
+
+          <!-- Off-canvas / inline navigation -->
+          <nav
+            class="fixed left-0 top-0 z-[67] flex h-full w-80 max-w-[85vw] -translate-x-full flex-col overflow-y-auto bg-white shadow-[1px_1px_3px_0_rgba(0,0,0,0.25)] transition-transform duration-300 peer-checked:translate-x-0 lg:static lg:h-auto lg:w-auto lg:max-w-none lg:flex-1 lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:overflow-visible lg:bg-transparent lg:shadow-none"
+            aria-label="Main"
+          >
+            <!-- Off-canvas header (mobile only) -->
+            <div
+              class="flex items-center justify-between bg-teal px-5 py-4 lg:hidden"
+            >
+              <a
+                href="#top"
+                class="inline-flex items-center gap-2.5"
+                aria-label="Chasing Sun Africa — home"
+              >
+                <img
+                  src="images/greenhouse/CHASING-SUN.webp"
+                  alt="Chasing Sun Africa"
+                  class="h-14 w-auto object-contain"
+                />
+              </a>
+              <label
+                for="nav-toggle"
+                class="cursor-pointer rounded-md p-1.5 text-white hover:bg-white/15"
+                aria-label="Close menu"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </label>
+            </div>
+
+            <a
+              href="#top"
+              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:font-bold hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-bold xl:pl-5"
+              >Home</a
+            >
+            <a
+              href="#horticulture"
+              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
+              >Horticulture</a
+            >
+            <a
+              href="#commodity-trading"
+              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
+              >Commodity Trading</a
+            >
+            <a
+              href="#livestock"
+              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
+              >Livestock</a
+            >
+            <a
+              href="#agri-tech"
+              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
+              >Agri-Tech</a
+            >
+
+            <!-- Dropdown: opens on hover / keyboard focus, no JS -->
+            <div class="group relative lg:static">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-1.5 border-b border-black/5 px-5 py-5 text-left text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:w-auto lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:group-hover:font-bold lg:group-hover:text-teal-mid xl:pl-5"
+                aria-haspopup="true"
+              >
+                <span>The Farm</span>
+                <svg
+                  class="h-4 w-4 transition-transform lg:group-hover:rotate-180"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div
+                class="bg-cream/60 lg:absolute lg:left-[15px] lg:top-full lg:z-30 lg:hidden lg:w-[225px] lg:-translate-y-2 lg:rounded-sm lg:bg-white lg:shadow-[1px_1px_3px_0_rgba(0,0,0,0.15)] lg:group-focus-within:block lg:group-hover:block"
+              >
+                <a
+                  href="#about"
+                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
+                  >Who We Are</a
+                >
+                <a
+                  href="#produce"
+                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
+                  >What We Grow</a
+                >
+                <a
+                  href="#how-we-grow"
+                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
+                  >How We Grow</a
+                >
+                <a
+                  href="#gallery"
+                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
+                  >Farm Gallery</a
+                >
+                <a
+                  href="#buyers"
+                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
+                  >Who We Supply</a
+                >
+                <a
+                  href="#tour"
+                  class="block px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
+                  >Book a Tour</a
+                >
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              class="flex justify-between px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
+              >Help &amp; Contact</a
+            >
+
+            <!-- Phone contact, surfaced inside the drawer on mobile -->
+            <div
+              class="mt-10 flex items-center gap-2.5 border-t border-black/5 px-5 pt-6 lg:hidden"
+            >
+              <svg
+                class="h-7 w-7 shrink-0 text-gold"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <div>
+                <div class="text-[13px] uppercase tracking-[0.12em] text-muted">
+                  Call us:
+                </div>
+                <a href="tel:+254725665538" class="nums text-[17px] text-olive"
+                  ><strong>+254 725 665 538</strong></a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <!-- Hamburger (mobile only) -->
+          <div class="flex items-center gap-5 py-5 lg:hidden lg:py-0">
+            <label
+              for="nav-toggle"
+              class="cursor-pointer rounded-[7px] bg-olive p-2.5 text-white lg:hidden"
+              aria-label="Open menu"
+            >
+              <svg
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </label>
+          </div>
+
+          <!-- Phone contact (desktop) -->
+          <div
+            class="hidden shrink-0 lg:flex lg:items-center lg:justify-end lg:gap-2.5 lg:px-2.5"
+          >
+            <svg
+              class="h-9 w-9 shrink-0 text-gold"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            <div>
+              <div class="text-[13px] uppercase tracking-[0.12em] text-muted">
+                Call us:
+              </div>
+              <a
+                href="tel:+254725665538"
+                class="nums text-[17px] text-olive transition-colors hover:text-teal"
+                ><strong>+254 725 665 538</strong></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================= HERO ============================= -->
+    <section
+      class="relative h-[620px] overflow-hidden sm:h-[760px] lg:h-[900px] xl:h-[1045px]"
+    >
+      <img
+        src="images/greenhouse/IMG_3152.jpg"
+        alt="A row of greenhouse tunnels on the Chasing Sun farm under an open Rift Valley sky"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <img
+        src="images/greenhouse/IMG_3150.jpg"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 h-full w-full animate-heroFade object-cover opacity-0 motion-reduce:hidden"
+      />
+
+      <div
+        class="relative z-10 mx-auto flex h-full max-w-[960px] items-center px-2.5 xl:max-w-[1170px]"
+      >
+        <div
+          class="relative flex w-full max-w-[340px] items-center justify-center sm:max-w-[430px] md:max-w-[500px] xl:max-w-[560px]"
+        >
+          <!-- Organic white blob that the headline sits on -->
+          <svg
+            class="pointer-events-none absolute left-1/2 top-1/2 h-[115%] w-[145%] max-w-none -translate-x-1/2 -translate-y-1/2 sm:h-[120%] sm:w-[135%] xl:h-[560px] xl:w-[700px]"
+            viewBox="0 0 656 558"
+            fill="none"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M181 0.999958C52.9999 6.19996 9.33321 153.167 3.49988 226C-6.90012 296 7.83321 367.167 16.4999 394C46.8999 505.6 97.4999 540.833 119 544.5C206.6 574.5 310.5 546.495 376 526.5C471 497.5 540.833 469.833 568 452.5C598 427 620.5 392.667 629.5 373.5C643.667 343.667 667.4 272.4 649 226C626 168 560.5 144.5 490 133.5C433.6 124.7 372.833 83.8333 349.5 64.5C275.1 6.89996 206.167 -1.83337 181 0.999958Z"
+              fill="white"
+            />
+          </svg>
+
+          <div
+            class="relative w-full max-w-[290px] px-6 py-14 sm:max-w-[350px] sm:px-7 lg:max-w-[390px] lg:py-20 xl:py-24"
+          >
+            <div class="mb-4 text-eyebrow uppercase text-teal">
+              We produce with purpose
+            </div>
+            <h1
+              class="mb-6 font-heading text-[clamp(1.875rem,1.35rem+2.35vw,3rem)] font-bold leading-[1.08] tracking-[-0.02em] text-olive lg:mb-8"
+            >
+              From African Farmers to Global Markets.
+            </h1>
+            <a
+              href="#tour"
+              class="inline-block border-2 border-gold bg-gold px-6 py-3.5 text-[14px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-8"
+            >
+              Visit our Farm <span class="pl-2.5">+</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= ABOUT ============================= -->
+    <section id="about" class="relative py-20 md:py-[100px] xl:py-[120px]">
+      <div class="relative z-10 mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+        <div
+          class="flex flex-col-reverse items-center gap-10 md:flex-row md:gap-0"
+        >
+          <div class="w-full md:w-7/12">
+            <div class="md:mr-5 lg:mr-0">
+              <h3 class="mb-4 font-heading text-h3 font-bold text-olive">
+                Who we are
+              </h3>
+              <p class="mb-4 max-w-[62ch] text-lead">
+                Chasing Sun Africa is a Nairobi-based agribusiness working at
+                the intersection of agriculture, technology and market
+                intelligence. Our farm sits between Mount Longonot and Lake
+                Naivasha, where controlled-environment greenhouses let us grow
+                to specification, year round, for professional buyers.
+              </p>
+              <blockquote
+                class="my-7 mb-9 border-l-2 border-gold pl-5 font-heading text-h5 font-medium italic leading-[1.5] text-olive"
+              >
+                <strong
+                  >“We believe that organic farming is a positive
+                  philosophy.”</strong
+                >
+              </blockquote>
+              <h3 class="mb-4 font-heading text-h3 font-bold text-olive">
+                Mission and vision
+              </h3>
+              <p class="mb-4 max-w-[62ch]">
+                Our mission is to connect African growers to global demand
+                without losing sight of where the food came from. Every crop we
+                trade is traceable to a vetted farm, checked against the buyer's
+                specification, and dispatched on our own logistics.
+              </p>
+              <p class="max-w-[62ch]">
+                We build the business on four pillars — horticulture, commodity
+                trading, livestock and agri-tech — combining earthy farming
+                wisdom with precision agriculture, drip irrigation, integrated
+                pest management and demand-led crop planning.
+              </p>
+              <a
+                href="#pillars"
+                class="mt-5 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-9 xl:mt-[50px] xl:px-11 xl:py-[18px]"
+              >
+                What We Do <span class="pl-2.5">+</span>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-5/12">
+            <img
+              src="images/greenhouse/IMG_3156.jpg"
+              alt="A member of the Chasing Sun farm team outside newly built greenhouse tunnels"
+              loading="lazy"
+              class="w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PILLARS ============================ -->
+    <section
+      id="pillars"
+      class="bg-[url('images/greenhouse/IMG_8550.jpg')] bg-cover bg-center bg-no-repeat"
+    >
+      <div class="bg-white/90 py-20 md:py-[100px] xl:py-[120px]">
+        <div class="relative mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+          <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-16">
+            <div class="mb-4 flex items-center justify-center">
+              <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+              <div class="text-eyebrow uppercase text-teal">What We Do</div>
+              <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+            </div>
+            <h2 class="font-heading text-h2 font-bold text-olive">
+              Four pillars, one standard —<br />quality, consistency and full
+              traceability.
+            </h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 gap-[30px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-[50px]"
+          >
+            <article id="horticulture" class="group scroll-mt-28">
+              <a href="#horticulture-detail" class="block overflow-hidden">
+                <img
+                  src="images/greenhouse/IMG_7525.jpg"
+                  alt="Trellised capsicum growing under greenhouse cover"
+                  loading="lazy"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </a>
+              <div class="mt-[30px] text-center">
+                <span
+                  class="nums block text-[13px] font-semibold tracking-[0.14em] text-gold"
+                  >01</span
+                >
+                <a
+                  href="#horticulture-detail"
+                  class="mt-1.5 inline-block font-heading text-h4 font-semibold text-olive transition-colors hover:text-teal"
+                  >Horticulture</a
+                >
+                <p class="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.6]">
+                  Controlled-environment greenhouse produce, planned around what
+                  buyers actually order.
+                </p>
+              </div>
+            </article>
+
+            <article id="commodity-trading" class="group scroll-mt-28">
+              <a href="#commodity-detail" class="block overflow-hidden">
+                <img
+                  src="images/greenhouse/IMG_3153.jpg"
+                  alt="Aromatic herb crop growing in a greenhouse tunnel"
+                  loading="lazy"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </a>
+              <div class="mt-[30px] text-center">
+                <span
+                  class="nums block text-[13px] font-semibold tracking-[0.14em] text-gold"
+                  >02</span
+                >
+                <a
+                  href="#commodity-detail"
+                  class="mt-1.5 inline-block font-heading text-h4 font-semibold text-olive transition-colors hover:text-teal"
+                  >Commodity Trading</a
+                >
+                <p class="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.6]">
+                  High-value dried botanicals and spices — ginger, hibiscus and
+                  chamomile — sourced to spec.
+                </p>
+              </div>
+            </article>
+
+            <article id="livestock" class="group scroll-mt-28">
+              <a href="#livestock-detail" class="block overflow-hidden">
+                <img
+                  src="images/greenhouse/IMG_3152.jpg"
+                  alt="Open grazing land beside the greenhouse tunnels"
+                  loading="lazy"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </a>
+              <div class="mt-[30px] text-center">
+                <span
+                  class="nums block text-[13px] font-semibold tracking-[0.14em] text-gold"
+                  >03</span
+                >
+                <a
+                  href="#livestock-detail"
+                  class="mt-1.5 inline-block font-heading text-h4 font-semibold text-olive transition-colors hover:text-teal"
+                  >Livestock</a
+                >
+                <p class="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.6]">
+                  <span
+                    class="mb-2 inline-block bg-gold/25 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-teal-mid"
+                    >In development</span
+                  ><br />
+                  Free-range herds to small stock, built on digital tagging and
+                  health records.
+                </p>
+              </div>
+            </article>
+
+            <article id="agri-tech" class="group scroll-mt-28">
+              <a href="#how-we-grow" class="block overflow-hidden">
+                <img
+                  src="images/greenhouse/IMG_3148.jpg"
+                  alt="Drip irrigation lines running the length of a prepared greenhouse bed"
+                  loading="lazy"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </a>
+              <div class="mt-[30px] text-center">
+                <span
+                  class="nums block text-[13px] font-semibold tracking-[0.14em] text-gold"
+                  >04</span
+                >
+                <a
+                  href="#how-we-grow"
+                  class="mt-1.5 inline-block font-heading text-h4 font-semibold text-olive transition-colors hover:text-teal"
+                  >Agri-Tech (FarmOS)</a
+                >
+                <p class="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.6]">
+                  The irrigation, monitoring and record-keeping layer that makes
+                  the other three pillars measurable.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="text-center">
+            <a
+              href="#contact"
+              class="mt-10 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-9 md:mt-[60px] xl:px-11 xl:py-[18px]"
+            >
+              Request a Quote<span class="pl-2.5">+</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CTA ============================== -->
+    <section
+      class="bg-[url('images/greenhouse/IMG_8533.jpg')] bg-cover bg-center bg-no-repeat"
+    >
+      <div class="bg-olive/90 py-[60px] sm:py-20">
+        <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+          <div
+            class="flex flex-col items-center gap-[30px] lg:flex-row lg:gap-0"
+          >
+            <div class="w-full text-center lg:w-7/12">
+              <div class="mb-4 flex items-center justify-center">
+                <span
+                  class="mr-2.5 h-px w-10 bg-white/70"
+                  aria-hidden="true"
+                ></span>
+                <div class="text-eyebrow uppercase text-cream">
+                  Bulk &amp; Export Orders
+                </div>
+                <span
+                  class="ml-2.5 h-px w-10 bg-white/70"
+                  aria-hidden="true"
+                ></span>
+              </div>
+              <h2 class="font-heading text-h2 font-bold text-white">
+                Tell us your quantity, grade and moisture spec — we will fulfil
+                to it.
+              </h2>
+            </div>
+            <div class="w-full text-center lg:w-5/12 lg:text-right">
+              <a
+                href="#contact"
+                class="inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-olive sm:px-9 xl:px-11 xl:py-[18px]"
+              >
+                Contact Us<span class="pl-2.5">+</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== WHAT WE GROW =========================== -->
+    <section
+      id="produce"
+      class="scroll-mt-24 py-20 md:py-[100px] xl:py-[120px]"
+    >
+      <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+        <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-16">
+          <div class="mb-4 flex items-center justify-center">
+            <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+            <div class="text-eyebrow uppercase text-teal">
+              From Our Greenhouses
+            </div>
+            <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+          </div>
+          <h2
+            id="horticulture-detail"
+            class="scroll-mt-28 font-heading text-h2 font-bold text-olive"
+          >
+            Indoor farming done right — precision, passion, and produce.
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-[30px] sm:grid-cols-2 md:grid-cols-3 lg:gap-[50px]"
+        >
+          <article class="group">
+            <div
+              class="relative flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src="images/greenhouse/IMG_7528.jpg"
+                alt="A ripe yellow bell pepper picked from the vine"
+                loading="lazy"
+                class="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+            <div class="py-10 text-center">
+              <div
+                class="mb-2 text-[13px] uppercase tracking-[0.12em] text-muted"
+              >
+                Coloured capsicum
+              </div>
+              <div class="font-heading text-h4 font-semibold text-olive">
+                Grown to grade
+              </div>
+              <p class="mx-auto mt-3 max-w-[32ch] text-[15px] leading-[1.6]">
+                Trellised, drip-fed and picked by colour and size against the
+                buyer's grade sheet.
+              </p>
+            </div>
+          </article>
+
+          <article class="group">
+            <div
+              class="relative flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src="images/greenhouse/IMG_6872.jpg"
+                alt="A long greenhouse cucumber held up beside the vine it grew on"
+                loading="lazy"
+                class="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+            <div class="py-10 text-center">
+              <div
+                class="mb-2 text-[13px] uppercase tracking-[0.12em] text-muted"
+              >
+                Cucumber
+              </div>
+              <div class="font-heading text-h4 font-semibold text-olive">
+                Year-round supply
+              </div>
+              <p class="mx-auto mt-3 max-w-[32ch] text-[15px] leading-[1.6]">
+                Staggered planting under cover keeps volumes steady outside the
+                open-field season.
+              </p>
+            </div>
+          </article>
+
+          <article class="group sm:col-span-2 md:col-span-1">
+            <div
+              class="relative flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src="images/greenhouse/IMG_3153.jpg"
+                alt="A feathery aromatic herb crop filling a greenhouse tunnel"
+                loading="lazy"
+                class="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+            <div class="py-10 text-center">
+              <div
+                class="mb-2 text-[13px] uppercase tracking-[0.12em] text-muted"
+              >
+                Herbs &amp; botanicals
+              </div>
+              <div class="font-heading text-h4 font-semibold text-olive">
+                Grown for drying
+              </div>
+              <p class="mx-auto mt-3 max-w-[32ch] text-[15px] leading-[1.6]">
+                Aromatics destined for tea manufacturers, spice blenders and
+                value-addition companies.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FARM TOUR ============================ -->
+    <section
+      id="tour"
+      class="relative scroll-mt-24 bg-[url('images/greenhouse/IMG_3151.jpg')] bg-cover bg-center"
+    >
+      <div class="py-[60px] sm:py-20">
+        <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+          <div
+            class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-0"
+          >
+            <div class="bg-olive/90 p-[30px] sm:p-10 xl:p-[50px] 2xl:p-[60px]">
+              <div class="mb-4 flex items-center">
+                <span
+                  class="mr-2.5 h-px w-10 bg-white/70"
+                  aria-hidden="true"
+                ></span>
+                <div class="text-eyebrow uppercase text-cream">
+                  Book a farm tour
+                </div>
+              </div>
+              <h2 class="font-heading text-h2 font-bold text-white">
+                See the greenhouses for yourself, between Longonot and Naivasha.
+              </h2>
+              <p class="mt-5 max-w-[46ch] text-lead text-white/90">
+                Farm visits run on Mondays and Fridays by advance booking. Email
+                or call ahead and we will arrange a walk-through of the tunnels,
+                the irrigation setup and the packing process.
+              </p>
+              <a
+                href="mailto:admin@chasingsun.africa?subject=Farm%20tour%20booking"
+                class="mt-5 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-olive sm:px-9 xl:mt-[50px] xl:px-11 xl:py-[18px]"
+              >
+                Book a Tour<span class="pl-2.5">+</span>
+              </a>
+            </div>
+
+            <div class="flex items-center justify-center lg:justify-end">
+              <div
+                class="relative z-10 flex h-[180px] w-[180px] flex-col items-center justify-center rounded-full bg-cream text-center"
+              >
+                <span
+                  class="absolute inset-0 -z-10 animate-ripple rounded-full bg-cream motion-reduce:hidden"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="absolute inset-0 -z-10 animate-ripple2 rounded-full bg-cream motion-reduce:hidden"
+                  aria-hidden="true"
+                ></span>
+                <svg
+                  class="mb-2 h-7 w-7 text-teal-mid"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                <div class="font-heading text-h4 font-bold text-olive">
+                  Mon &amp; Fri
+                </div>
+                <div
+                  class="px-6 text-[13px] uppercase tracking-[0.1em] text-teal-mid"
+                >
+                  By advance booking
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= HOW WE GROW ========================= -->
+    <section
+      id="how-we-grow"
+      class="scroll-mt-24 py-20 md:py-[100px] xl:py-[120px]"
+    >
+      <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+        <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-16">
+          <div class="mb-4 flex items-center justify-center">
+            <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+            <div class="text-eyebrow uppercase text-teal">How We Grow</div>
+            <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+          </div>
+          <h2 class="font-heading text-h2 font-bold text-olive">
+            Precision agriculture, run on records rather than guesswork.
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-[15px] sm:grid-cols-2 lg:gap-0 xl:grid-cols-4"
+        >
+          <div
+            class="flex min-h-[230px] flex-col items-center justify-center gap-2.5 bg-cream p-6 text-center sm:flex-row sm:gap-[30px] sm:text-left"
+          >
+            <div
+              class="flex h-[70px] w-[70px] shrink-0 items-center justify-center rounded-full bg-olive p-2.5"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 2.7 6.5 8.2a7.8 7.8 0 1 0 11 0z" />
+                <path d="M12 22v-6" />
+              </svg>
+            </div>
+            <div class="flex flex-col items-center sm:items-start">
+              <div class="font-heading text-h5 font-semibold text-olive">
+                Drip irrigation
+              </div>
+              <div class="mt-1 text-[14px] leading-[1.5] text-muted">
+                Water to the root, not the row
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex min-h-[230px] flex-col items-center justify-center gap-2.5 bg-cream p-6 text-center sm:flex-row sm:gap-[30px] sm:text-left"
+          >
+            <div
+              class="flex h-[70px] w-[70px] shrink-0 items-center justify-center rounded-full bg-olive p-2.5"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <div class="flex flex-col items-center sm:items-start">
+              <div class="font-heading text-h5 font-semibold text-olive">
+                Integrated pest management
+              </div>
+              <div class="mt-1 text-[14px] leading-[1.5] text-muted">
+                Monitored, minimal intervention
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex min-h-[230px] flex-col items-center justify-center gap-2.5 bg-cream p-6 text-center sm:flex-row sm:gap-[30px] sm:text-left"
+          >
+            <div
+              class="flex h-[70px] w-[70px] shrink-0 items-center justify-center rounded-full bg-olive p-2.5"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <polyline points="12 7 12 12 15.5 14" />
+              </svg>
+            </div>
+            <div class="flex flex-col items-center sm:items-start">
+              <div class="font-heading text-h5 font-semibold text-olive">
+                Year-round production
+              </div>
+              <div class="mt-1 text-[14px] leading-[1.5] text-muted">
+                Under cover, off-season included
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex min-h-[230px] flex-col items-center justify-center gap-2.5 bg-cream p-6 text-center sm:flex-row sm:gap-[30px] sm:text-left"
+          >
+            <div
+              class="flex h-[70px] w-[70px] shrink-0 items-center justify-center rounded-full bg-olive p-2.5"
+            >
+              <svg
+                class="h-8 w-8 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="flex flex-col items-center sm:items-start">
+              <div class="font-heading text-h5 font-semibold text-olive">
+                Demand-led planning
+              </div>
+              <div class="mt-1 text-[14px] leading-[1.5] text-muted">
+                We plant against real orders
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ GALLERY ============================ -->
+    <section id="gallery" class="scroll-mt-24 mb-[100px] xl:mb-[170px]">
+      <div class="mx-auto max-w-full px-4 md:px-[75px]">
+        <div
+          class="no-scrollbar flex snap-x snap-mandatory gap-[35px] overflow-x-auto scroll-smooth pb-2"
+        >
+          <article
+            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
+          >
+            <img
+              src="images/greenhouse/IMG_3149.jpg"
+              alt="A newly prepared greenhouse with drip lines laid before planting"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+            >
+              <ul class="space-y-[30px]">
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Stage:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Bed preparation
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Site:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Naivasha
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
+          >
+            <img
+              src="images/greenhouse/IMG_3154.jpg"
+              alt="Young cucumber plants establishing along the drip lines"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+            >
+              <ul class="space-y-[30px]">
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Stage:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Establishment
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Crop:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Cucumber
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
+          >
+            <img
+              src="images/greenhouse/IMG_8652.JPG"
+              alt="Even rows of young capsicum seedlings running the length of a tunnel"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+            >
+              <ul class="space-y-[30px]">
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Stage:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Vegetative
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Crop:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Capsicum
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
+          >
+            <img
+              src="images/greenhouse/IMG_8782.jpg"
+              alt="A full cucumber canopy trained up the greenhouse trellis"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+            >
+              <ul class="space-y-[30px]">
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Stage:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Full canopy
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Crop:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Cucumber
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
+          >
+            <img
+              src="images/greenhouse/9d682524-b1a6-4777-a67e-bb110dc9e8c9.jpg"
+              alt="Two agronomists inspecting a newly transplanted crop"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+            >
+              <ul class="space-y-[30px]">
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Stage:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Crop scouting
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Team:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Agronomy
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
+          >
+            <img
+              src="images/greenhouse/B097AB55-3810-42E7-B0EF-DA89BFE9BAFB.jpg"
+              alt="The farm team positioning a bulk water storage tank"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+            >
+              <ul class="space-y-[30px]">
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Stage:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Water storage
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
+                  >
+                    Team:
+                  </div>
+                  <div class="font-heading text-h5 font-medium text-white">
+                    Infrastructure
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p
+          class="mt-6 text-center text-[13px] uppercase tracking-[0.12em] text-muted/80"
+        >
+          Scroll or swipe through the farm &rarr;
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================== WHO WE SUPPLY ======================== -->
+    <section id="buyers" class="scroll-mt-24 my-20 md:my-[100px]">
+      <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+        <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-14">
+          <div class="mb-4 flex items-center justify-center">
+            <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+            <div class="text-eyebrow uppercase text-teal">Who We Supply</div>
+            <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+          </div>
+          <h2
+            id="commodity-detail"
+            class="scroll-mt-28 font-heading text-h2 font-bold text-olive"
+          >
+            Fulfilling global demand with verified, quality-checked crops.
+          </h2>
+        </div>
+
+        <div
+          class="no-scrollbar flex snap-x snap-mandatory gap-[35px] overflow-x-auto scroll-smooth pb-2"
+        >
+          <div
+            class="relative z-10 w-full shrink-0 snap-start overflow-hidden bg-cream p-[30px] md:w-[calc(50%-17.5px)] md:px-[60px] md:py-10"
+          >
+            <span
+              class="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 select-none font-heading text-[400px] font-semibold leading-none text-teal/[0.06] md:text-[600px]"
+              aria-hidden="true"
+              >01</span
+            >
+            <h3 class="mb-3.5 font-heading text-h4 font-bold text-olive">
+              Value-addition companies
+            </h3>
+            <p class="mb-6">
+              Bulk dried botanicals bought to a written specification —
+              quantity, grade and moisture agreed before the first consignment
+              moves.
+            </p>
+            <div
+              class="text-[15px] font-medium uppercase tracking-[0.08em] text-teal"
+            >
+              Ginger &middot; Hibiscus &middot; Chamomile
+            </div>
+          </div>
+
+          <div
+            class="relative z-10 w-full shrink-0 snap-start overflow-hidden bg-cream p-[30px] md:w-[calc(50%-17.5px)] md:px-[60px] md:py-10"
+          >
+            <span
+              class="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 select-none font-heading text-[400px] font-semibold leading-none text-teal/[0.06] md:text-[600px]"
+              aria-hidden="true"
+              >02</span
+            >
+            <h3 class="mb-3.5 font-heading text-h4 font-bold text-olive">
+              Spice blenders
+            </h3>
+            <p class="mb-6">
+              We source against market deficits, so the lines you struggle to
+              fill are the lines we go looking for on your behalf.
+            </p>
+            <div
+              class="text-[15px] font-medium uppercase tracking-[0.08em] text-teal"
+            >
+              Deficit-driven sourcing
+            </div>
+          </div>
+
+          <div
+            class="relative z-10 w-full shrink-0 snap-start overflow-hidden bg-cream p-[30px] md:w-[calc(50%-17.5px)] md:px-[60px] md:py-10"
+          >
+            <span
+              class="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 select-none font-heading text-[400px] font-semibold leading-none text-teal/[0.06] md:text-[600px]"
+              aria-hidden="true"
+              >03</span
+            >
+            <h3 class="mb-3.5 font-heading text-h4 font-bold text-olive">
+              Tea manufacturers
+            </h3>
+            <p class="mb-6">
+              Botanicals traceable back to the vetted grower who produced them,
+              with in-house logistics handling dispatch.
+            </p>
+            <div
+              class="text-[15px] font-medium uppercase tracking-[0.08em] text-teal"
+            >
+              Africa &middot; Middle East &middot; beyond
+            </div>
+          </div>
+
+          <div
+            id="livestock-detail"
+            class="relative z-10 w-full shrink-0 scroll-mt-28 snap-start overflow-hidden bg-cream p-[30px] md:w-[calc(50%-17.5px)] md:px-[60px] md:py-10"
+          >
+            <span
+              class="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 select-none font-heading text-[400px] font-semibold leading-none text-teal/[0.06] md:text-[600px]"
+              aria-hidden="true"
+              >04</span
+            >
+            <span
+              class="mb-3 inline-block bg-gold/25 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-teal-mid"
+              >In development</span
+            >
+            <h3 class="mb-3.5 font-heading text-h4 font-bold text-olive">
+              Butcheries, processors &amp; retailers
+            </h3>
+            <p class="mb-6">
+              Our livestock line is still being built out. When it launches it
+              will run on the same principles as the crops — humane conditions,
+              quality feed, and digital tagging with health records for
+              farm-to-fork provenance.
+            </p>
+            <a
+              href="#contact"
+              class="font-medium text-olive underline decoration-gold decoration-2 underline-offset-4 transition-colors hover:text-teal"
+              >Talk to us about upcoming offerings</a
+            >
+          </div>
+        </div>
+        <p
+          class="mt-6 text-center text-[13px] uppercase tracking-[0.12em] text-muted/80"
+        >
+          Scroll or swipe for more &rarr;
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================= DIFFERENTIATORS ========================= -->
+    <section
+      class="bg-[url('images/greenhouse/IMG_8782.jpg')] bg-cover bg-center bg-no-repeat"
+    >
+      <div class="bg-teal-dark/85 py-20 md:py-[100px] xl:py-[120px]">
+        <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+          <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-16">
+            <div class="mb-4 flex items-center justify-center">
+              <span
+                class="mr-2.5 h-px w-10 bg-white/70"
+                aria-hidden="true"
+              ></span>
+              <div class="text-eyebrow uppercase text-teal-light">
+                Why Buyers Choose Us
+              </div>
+              <span
+                class="ml-2.5 h-px w-10 bg-white/70"
+                aria-hidden="true"
+              ></span>
+            </div>
+            <h2 class="font-heading text-h2 font-bold text-white">
+              Traceable to the grower, checked before dispatch.
+            </h2>
+          </div>
+
+          <ul
+            class="grid grid-cols-1 gap-10 text-white sm:grid-cols-2 xl:grid-cols-4"
+          >
+            <li class="flex flex-col items-center gap-4 text-center">
+              <svg
+                class="h-10 w-10 shrink-0 text-teal-light"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              <div>
+                <div class="font-heading text-h5 font-bold">
+                  Deficit-driven sourcing
+                </div>
+                <p
+                  class="mx-auto mt-2 max-w-[30ch] text-[15px] leading-[1.6] text-white/80"
+                >
+                  We track where the market is short and buy into the gap.
+                </p>
+              </div>
+            </li>
+
+            <li class="flex flex-col items-center gap-4 text-center">
+              <svg
+                class="h-10 w-10 shrink-0 text-teal-light"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <div>
+                <div class="font-heading text-h5 font-bold">
+                  Supplier verification
+                </div>
+                <p
+                  class="mx-auto mt-2 max-w-[30ch] text-[15px] leading-[1.6] text-white/80"
+                >
+                  Every consignment is traceable back to a vetted grower.
+                </p>
+              </div>
+            </li>
+
+            <li class="flex flex-col items-center gap-4 text-center">
+              <svg
+                class="h-10 w-10 shrink-0 text-teal-light"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.4 14.5a2 2 0 0 0 .4-2.2l-.6-1.1a2 2 0 0 1 0-1.9l.6-1.1a2 2 0 0 0-1.6-3H18a2 2 0 0 1-1.7-1l-.5-1a2 2 0 0 0-2.9-.6"
+                />
+                <path
+                  d="M3.6 9.5a2 2 0 0 0-.4 2.2l.6 1.1a2 2 0 0 1 0 1.9l-.6 1.1a2 2 0 0 0 1.6 3H6a2 2 0 0 1 1.7 1l.5 1a2 2 0 0 0 2.9.6"
+                />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <div>
+                <div class="font-heading text-h5 font-bold">
+                  Custom fulfillment
+                </div>
+                <p
+                  class="mx-auto mt-2 max-w-[30ch] text-[15px] leading-[1.6] text-white/80"
+                >
+                  Quantity, grade and moisture matched to your spec.
+                </p>
+              </div>
+            </li>
+
+            <li class="flex flex-col items-center gap-4 text-center">
+              <svg
+                class="h-10 w-10 shrink-0 text-teal-light"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="1" y="3" width="15" height="13" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+              <div>
+                <div class="font-heading text-h5 font-bold">
+                  Timely dispatch
+                </div>
+                <p
+                  class="mx-auto mt-2 max-w-[30ch] text-[15px] leading-[1.6] text-white/80"
+                >
+                  In-house logistics, so lead times are ours to keep.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= HELP & CONTACT ========================= -->
+    <section
+      id="contact"
+      class="scroll-mt-24 py-20 md:py-[100px] xl:py-[120px]"
+    >
+      <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+        <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-14">
+          <div class="mb-4 flex items-center justify-center">
+            <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+            <div class="text-eyebrow uppercase text-teal">
+              Help &amp; Contact
+            </div>
+            <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
+          </div>
+          <h2 class="font-heading text-h2 font-bold text-olive">
+            Talk to us about an order, a tour, or a partnership.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-[30px] lg:grid-cols-3">
+          <div class="bg-soft p-5 sm:p-[30px]">
+            <svg
+              class="mb-5 h-9 w-9 text-olive"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <h3 class="mb-3 font-heading text-h4 font-bold text-olive">
+              Visit the office
+            </h3>
+            <p class="mb-2 text-[15px] leading-[1.7]">
+              33 Muthithi Road, Nairobi, Kenya
+            </p>
+            <p>
+              Jobs and internships: please visit our office for information on
+              open positions.
+            </p>
+          </div>
+
+          <div class="bg-soft p-5 sm:p-[30px]">
+            <svg
+              class="mb-5 h-9 w-9 text-olive"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
+              />
+              <polyline points="22 6 12 13 2 6" />
+            </svg>
+            <h3 class="mb-3 font-heading text-h4 font-bold text-olive">
+              Help with an order
+            </h3>
+            <p class="mb-2 text-[15px] leading-[1.7]">
+              Email your order details to
+              <a
+                href="mailto:admin@chasingsun.africa"
+                class="text-olive underline decoration-gold underline-offset-4 hover:text-teal"
+                >admin@chasingsun.africa</a
+              >
+              and we will pick it up from there.
+            </p>
+            <p>
+              Or call
+              <a
+                href="tel:+254725665538"
+                class="text-olive underline decoration-gold underline-offset-4 hover:text-teal"
+                >+254 725 665 538</a
+              >.
+            </p>
+          </div>
+
+          <div class="bg-soft p-5 sm:p-[30px]">
+            <svg
+              class="mb-5 h-9 w-9 text-olive"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 2 3 7v10l9 5 9-5V7l-9-5z" />
+              <path d="M12 22V12" />
+              <path d="m3 7 9 5 9-5" />
+            </svg>
+            <h3 class="mb-3 font-heading text-h4 font-bold text-olive">
+              The farm
+            </h3>
+            <p class="mb-2 text-[15px] leading-[1.7]">
+              Between Mount Longonot and Lake Naivasha, Kenya.
+            </p>
+            <p>Tours run Mondays and Fridays, by advance booking.</p>
+          </div>
+        </div>
+
+        <form
+          action="mailto:admin@chasingsun.africa"
+          method="post"
+          enctype="text/plain"
+          class="mt-[30px] bg-cream p-5 sm:p-[30px] xl:p-10"
+        >
+          <h3 class="mb-6 font-heading text-h4 font-bold text-olive">
+            Send us a message
+          </h3>
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+            <label class="block">
+              <span
+                class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
+                >Name</span
+              >
+              <input
+                type="text"
+                name="name"
+                required
+                class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
+              />
+            </label>
+            <label class="block">
+              <span
+                class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
+                >Email</span
+              >
+              <input
+                type="email"
+                name="email"
+                required
+                class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
+              />
+            </label>
+            <label class="block">
+              <span
+                class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
+                >Phone</span
+              >
+              <input
+                type="tel"
+                name="phone"
+                class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
+              />
+            </label>
+          </div>
+          <label class="mt-5 block">
+            <span
+              class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
+              >Message</span
+            >
+            <textarea
+              name="message"
+              rows="5"
+              required
+              class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
+            ></textarea>
+          </label>
+          <button
+            type="submit"
+            class="mt-6 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-9 xl:px-11 xl:py-[18px]"
+          >
+            Send Message<span class="pl-2.5">+</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer>
+      <div
+        class="bg-olive bg-cover bg-center bg-blend-multiply xl:bg-[url('images/greenhouse/IMG_3148.jpg')]"
+      >
+        <div class="py-20 md:py-[100px] xl:py-[120px]">
+          <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
+            <div class="flex flex-wrap">
+              <div class="w-full pb-[30px] md:w-1/2 lg:w-5/12 lg:pb-0">
+                <div class="pr-0 md:pr-[50px] lg:pr-[70px]">
+                  <a
+                    href="#top"
+                    class="inline-flex items-center gap-2.5"
+                    aria-label="Chasing Sun Africa — home"
+                  >
+                    <img
+                      src="images/greenhouse/CHASING-SUN.webp"
+                      alt="Chasing Sun Africa"
+                      class="h-24 w-auto object-contain"
+                    />
+                  </a>
+                  <p
+                    class="mt-6 max-w-[42ch] text-[15px] leading-[1.7] text-white/90"
+                  >
+                    A Nairobi-based agribusiness taking African produce to
+                    global markets — grown with organic-first practices and
+                    traceable to the grower.
+                  </p>
+                  <p class="mt-4 text-[15px] leading-[1.7] text-white/90">
+                    33 Muthithi Road, Nairobi, Kenya<br />
+                    <a
+                      href="mailto:admin@chasingsun.africa"
+                      class="transition-colors hover:text-teal-light"
+                      >admin@chasingsun.africa</a
+                    >
+                  </p>
+                  <div class="mt-2.5 flex items-center gap-2.5 px-[5px] py-5">
+                    <svg
+                      class="h-9 w-9 shrink-0 text-white"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                    <div>
+                      <div
+                        class="text-[13px] uppercase tracking-[0.12em] text-white/70"
+                      >
+                        Call us:
+                      </div>
+                      <a
+                        href="tel:+254725665538"
+                        class="nums text-[17px] text-white transition-colors hover:text-teal-light"
+                        ><strong>+254 725 665 538</strong></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full pb-[30px] md:w-1/2 lg:w-3/12 lg:pb-0">
+                <h4 class="mb-7 font-heading text-h4 font-bold text-white">
+                  What we do
+                </h4>
+                <ul>
+                  <li class="flex leading-[2.6]">
+                    <svg
+                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="13 17 18 12 13 7" />
+                      <polyline points="6 17 11 12 6 7" />
+                    </svg>
+                    <a
+                      href="#horticulture"
+                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
+                      >Horticulture</a
+                    >
+                  </li>
+                  <li class="flex leading-[2.6]">
+                    <svg
+                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="13 17 18 12 13 7" />
+                      <polyline points="6 17 11 12 6 7" />
+                    </svg>
+                    <a
+                      href="#commodity-trading"
+                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
+                      >Commodity Trading</a
+                    >
+                  </li>
+                  <li class="flex leading-[2.6]">
+                    <svg
+                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="13 17 18 12 13 7" />
+                      <polyline points="6 17 11 12 6 7" />
+                    </svg>
+                    <a
+                      href="#livestock"
+                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
+                      >Livestock</a
+                    >
+                  </li>
+                  <li class="flex leading-[2.6]">
+                    <svg
+                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="13 17 18 12 13 7" />
+                      <polyline points="6 17 11 12 6 7" />
+                    </svg>
+                    <a
+                      href="#agri-tech"
+                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
+                      >Agri-Tech</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="w-full pb-[30px] md:w-1/2 lg:w-2/12 lg:pb-0">
+                <h4 class="mb-7 font-heading text-h4 font-bold text-white">
+                  The Farm
+                </h4>
+                <ul>
+                  <li class="flex leading-[2.6]">
+                    <svg
+                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="13 17 18 12 13 7" />
+                      <polyline points="6 17 11 12 6 7" />
+                    </svg>
+                    <a
+                      href="#produce"
+                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
+                      >What We Grow</a
+                    >
+                  </li>
+                  <li class="flex leading-[2.6]">
+                    <svg
+                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="13 17 18 12 13 7" />
+                      <polyline points="6 17 11 12 6 7" />
+                    </svg>
+                    <a
+                      href="#gallery"
+                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
+                      >Farm Gallery</a
+                    >
+                  </li>
+                  <li class="flex leading-[2.6]">
+                    <svg
+                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="13 17 18 12 13 7" />
+                      <polyline points="6 17 11 12 6 7" />
+                    </svg>
+                    <a
+                      href="#tour"
+                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
+                      >Book a Tour</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="w-full md:w-1/2 lg:w-2/12">
+                <h4 class="mb-7 font-heading text-h4 font-bold text-white">
+                  Newsletter
+                </h4>
+                <p class="mb-4 text-[15px] leading-[1.6] text-white/90">
+                  Harvest updates and availability, straight to your inbox.
+                </p>
+                <form
+                  action="mailto:admin@chasingsun.africa"
+                  method="post"
+                  enctype="text/plain"
+                  class="flex flex-col gap-2.5"
+                >
+                  <label class="sr-only" for="newsletter-email"
+                    >Email address</label
+                  >
+                  <input
+                    id="newsletter-email"
+                    type="email"
+                    name="subscriber_email"
+                    required
+                    placeholder="you@company.com"
+                    class="w-full border border-white/40 bg-white/10 px-4 py-3 text-[15px] text-white outline-none transition-colors placeholder:text-white/60 focus:border-gold"
+                  />
+                  <button
+                    type="submit"
+                    class="border-2 border-gold bg-gold px-5 py-3 text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-olive"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-olive/90 py-5 text-center">
+        <p class="text-[14px] text-white/90">
+          © 2026 Chasing Sun Africa.
+          <a
+            href="/terms"
+            class="text-teal-light underline-offset-4 transition-colors hover:text-white hover:underline"
+            >Terms &amp; Conditions</a
+          >
+          &middot;
+          <a
+            href="/privacy"
+            class="text-teal-light underline-offset-4 transition-colors hover:text-white hover:underline"
+            >Privacy &amp; Cookie Policy</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        const header = document.querySelector("header");
+        const hero = document.querySelector("body > section");
+
+        if (!reduceMotion) {
+          header?.classList.add("hero-load");
+          header?.style.setProperty("--hero-delay", "80ms");
+
+          const heroImages = hero?.querySelectorAll(":scope > img");
+          heroImages?.forEach((image, index) => {
+            if (index === 0) image.classList.add("hero-image-load");
+          });
+
+          const heroContent = hero?.querySelector(":scope > div");
+          heroContent?.classList.add("hero-load");
+          heroContent?.style.setProperty("--hero-delay", "320ms");
+        }
+
+        const revealItems = [];
+        const sections = [...document.querySelectorAll("body > section")].slice(
+          1,
+        );
+
+        sections.forEach((section, sectionIndex) => {
+          const sectionContent = section.querySelector(":scope > div");
+          if (sectionContent) {
+            sectionContent.classList.add("motion-item");
+            sectionContent.dataset.motion =
+              sectionIndex % 3 === 0
+                ? "left"
+                : sectionIndex % 3 === 1
+                  ? "right"
+                  : "scale";
+            revealItems.push(sectionContent);
+          }
+
+          section.querySelectorAll("article").forEach((card, cardIndex) => {
+            card.classList.add("motion-item");
+            card.dataset.motion = "scale";
+            card.style.setProperty(
+              "--motion-delay",
+              `${Math.min(cardIndex % 4, 3) * 110}ms`,
+            );
+            revealItems.push(card);
+          });
+        });
+
+        const footerContent = document.querySelector("footer > div");
+        if (footerContent) {
+          footerContent.classList.add("motion-item");
+          revealItems.push(footerContent);
+        }
+
+        if (reduceMotion || !("IntersectionObserver" in window)) {
+          revealItems.forEach((item) => item.classList.add("is-visible"));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -8% 0px",
+          },
+        );
+
+        requestAnimationFrame(() => {
+          revealItems.forEach((item) => observer.observe(item));
+        });
+      })();
+    </script>
+  </body>
+</html>
