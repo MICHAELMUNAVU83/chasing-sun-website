@@ -3,23 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chasing Sun Africa — From African Farmers to Global Markets</title>
+    <title>Chasing Sun Africa — From the Ground Up</title>
     <meta
       name="description"
-      content="Chasing Sun Africa is a Nairobi-based agribusiness growing greenhouse horticulture between Mount Longonot and Lake Naivasha, and sourcing verified, quality-checked crops for buyers across Africa, the Middle East and beyond."
+      content="Chasing Sun grows and trades premium-quality crops for African markets with a focus on quality, consistency and traceability."
     />
 
     <meta
       property="og:title"
-      content="Chasing Sun Africa — From African Farmers to Global Markets"
+      content="Chasing Sun Africa — From the Ground Up"
     />
     <meta
       property="og:description"
-      content="Greenhouse horticulture and commodity trading — produced with purpose and traceable to the grower."
+      content="Premium crops grown and traded for African markets with quality, consistency and traceability."
     />
-    <meta property="og:image" content="images/greenhouse/IMG_3150.jpg" />
+    <meta
+      property="og:image"
+      content="images/greenhouse/hero-golden-hour-v2.webp"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="images/greenhouse/IMG_3150.jpg" />
+    <meta
+      name="twitter:image"
+      content="images/greenhouse/hero-golden-hour-v2.webp"
+    />
 
     <link rel="icon" href="images/greenhouse/CHASING-SUN.webp" />
 
@@ -27,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&amp;display=swap"
     />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,22 +42,23 @@
         theme: {
           extend: {
             colors: {
-              olive: "#6a961f",
-              gold: "#fab935",
+              olive: "#173f35",
+              leaf: "#6a961f",
+              gold: "#e9a72f",
               teal: {
-                DEFAULT: "#177165",
-                mid: "#2c604a",
-                dark: "#0a312c",
+                DEFAULT: "#245d4f",
+                mid: "#173f35",
+                dark: "#082c25",
                 light: "#a4d6cf",
                 pale: "#e1f4f2",
               },
               cream: "#f8f2e6",
-              muted: "#777777",
-              soft: "#efefef",
+              muted: "#626963",
+              soft: "#eef1ec",
             },
             fontFamily: {
               heading: ['"Playfair Display"', "Georgia", "serif"],
-              body: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+              body: ['"DM Sans"', "Helvetica", "Arial", "sans-serif"],
             },
             /* One fluid type scale for the whole page. Each step interpolates
            between its mobile and desktop size, so the headings stop
@@ -147,10 +154,69 @@
         text-wrap: pretty;
       }
 
-      /* Roboto's default figures are proportional; tabular keeps the stat
-     rows and phone numbers from shifting. */
+      /* Tabular figures keep stat rows and phone numbers from shifting. */
       .nums {
         font-variant-numeric: tabular-nums;
+      }
+
+      /* Brand motif: a restrained sun disc and orbit, used only on section
+         labels and numbered capability markers. */
+      body > section:not(:first-of-type) .text-eyebrow::before {
+        content: "";
+        display: inline-block;
+        width: 0.58rem;
+        height: 0.58rem;
+        margin-right: 0.65rem;
+        border: 2px solid #e9a72f;
+        border-radius: 9999px;
+        box-shadow: 0 0 0 4px rgb(233 167 47 / 12%);
+        vertical-align: 0.02em;
+      }
+
+      .orbit-index {
+        position: relative;
+        display: inline-grid;
+        width: 2.75rem;
+        height: 2.75rem;
+        place-items: center;
+        border: 1px solid rgb(23 63 53 / 28%);
+        border-radius: 9999px;
+      }
+
+      .orbit-index::after {
+        content: "";
+        position: absolute;
+        top: -0.2rem;
+        right: 0.2rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        border: 2px solid white;
+        border-radius: 9999px;
+        background: #e9a72f;
+      }
+
+      .brand-photo {
+        box-shadow: 0 1.25rem 3rem rgb(8 44 37 / 12%);
+      }
+
+      .brand-button {
+        box-shadow: 0 0.75rem 1.75rem rgb(8 44 37 / 16%);
+      }
+
+      a[class*="bg-gold"],
+      button[class*="bg-gold"] {
+        box-shadow: 0 0.65rem 1.5rem rgb(8 44 37 / 14%);
+      }
+
+      .hero-orbit {
+        animation: orbitDrift 18s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+
+      @keyframes orbitDrift {
+        to {
+          transform: rotate(7deg) translate3d(0, -8px, 0);
+        }
       }
 
       /* Motion system: composited transforms keep the entrance animation
@@ -221,7 +287,8 @@
 
         .motion-item,
         .hero-load,
-        .hero-image-load {
+        .hero-image-load,
+        .hero-orbit {
           opacity: 1 !important;
           transform: none !important;
           filter: none !important;
@@ -470,56 +537,63 @@
 
     <!-- ============================= HERO ============================= -->
     <section
-      class="relative h-[620px] overflow-hidden sm:h-[760px] lg:h-[900px] xl:h-[1045px]"
+      class="relative isolate min-h-[660px] overflow-hidden bg-teal-dark sm:min-h-[760px] lg:min-h-[860px]"
     >
       <img
-        src="images/greenhouse/IMG_3152.jpg"
-        alt="A row of greenhouse tunnels on the Chasing Sun farm under an open Rift Valley sky"
-        class="absolute inset-0 h-full w-full object-cover"
+        src="images/greenhouse/hero-golden-hour-v2.webp"
+        alt="Chasing Sun greenhouse tunnels and fields in warm golden-hour light"
+        fetchpriority="high"
+        class="absolute inset-0 -z-30 h-full w-full object-cover object-[58%_center]"
       />
-      <img
-        src="images/greenhouse/IMG_3150.jpg"
-        alt=""
+      <div
+        class="absolute inset-0 -z-20 bg-gradient-to-r from-teal-dark/95 via-teal-dark/70 to-teal-dark/5"
         aria-hidden="true"
-        class="absolute inset-0 h-full w-full animate-heroFade object-cover opacity-0 motion-reduce:hidden"
-      />
+      ></div>
+      <div
+        class="absolute inset-0 -z-20 bg-gradient-to-t from-teal-dark/55 via-transparent to-teal-dark/20"
+        aria-hidden="true"
+      ></div>
+
+      <svg
+        class="hero-orbit pointer-events-none absolute -right-40 top-20 -z-10 h-[560px] w-[560px] text-cream/35 sm:-right-24 sm:h-[700px] sm:w-[700px] lg:right-[-5%] lg:h-[850px] lg:w-[850px]"
+        viewBox="0 0 800 800"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle cx="400" cy="400" r="248" stroke="currentColor" stroke-width="1" />
+        <circle cx="400" cy="400" r="330" stroke="currentColor" stroke-width="1" stroke-dasharray="4 12" />
+        <circle cx="650" cy="400" r="11" fill="#e9a72f" />
+        <circle cx="400" cy="70" r="6" fill="#f8f2e6" />
+      </svg>
 
       <div
-        class="relative z-10 mx-auto flex h-full max-w-[960px] items-center px-2.5 xl:max-w-[1170px]"
+        data-hero-content
+        class="relative z-10 mx-auto flex min-h-[660px] max-w-[960px] items-center px-5 sm:min-h-[760px] sm:px-8 lg:min-h-[860px] xl:max-w-[1170px] xl:px-2.5"
       >
-        <div
-          class="relative flex w-full max-w-[340px] items-center justify-center sm:max-w-[430px] md:max-w-[500px] xl:max-w-[560px]"
-        >
-          <!-- White blob that the headline sits on -->
-          <svg
-            class="pointer-events-none absolute left-1/2 top-1/2 h-[115%] w-[145%] max-w-none -translate-x-1/2 -translate-y-1/2 sm:h-[120%] sm:w-[135%] xl:h-[560px] xl:w-[700px]"
-            viewBox="0 0 656 558"
-            fill="none"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M181 0.999958C52.9999 6.19996 9.33321 153.167 3.49988 226C-6.90012 296 7.83321 367.167 16.4999 394C46.8999 505.6 97.4999 540.833 119 544.5C206.6 574.5 310.5 546.495 376 526.5C471 497.5 540.833 469.833 568 452.5C598 427 620.5 392.667 629.5 373.5C643.667 343.667 667.4 272.4 649 226C626 168 560.5 144.5 490 133.5C433.6 124.7 372.833 83.8333 349.5 64.5C275.1 6.89996 206.167 -1.83337 181 0.999958Z"
-              fill="white"
-            />
-          </svg>
-
-          <div
-            class="relative w-full max-w-[290px] px-6 py-14 sm:max-w-[350px] sm:px-7 lg:max-w-[390px] lg:py-20 xl:py-24"
-          >
-            <div class="mb-4 text-eyebrow uppercase text-teal">
-              We produce with purpose
-            </div>
-            <h1
-              class="mb-6 font-heading text-[clamp(1.875rem,1.35rem+2.35vw,3rem)] font-bold leading-[1.08] tracking-[-0.02em] text-olive lg:mb-8"
+        <div class="w-full max-w-[690px] py-28 text-white">
+          <div class="mb-6 flex items-center gap-3 text-eyebrow uppercase text-cream/90">
+            <span class="h-px w-10 bg-gold" aria-hidden="true"></span>
+            We produce with purpose
+          </div>
+          <h1 class="font-heading text-display font-semibold text-white">
+            From the Ground Up
+          </h1>
+          <p class="mt-6 max-w-[52ch] text-lead text-cream/90 sm:mt-8">
+            Premium crops grown and traded for African markets with quality,
+            consistency and traceability at every step.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-5 sm:mt-11">
+            <a
+              href="#produce"
+              class="brand-button inline-flex items-center gap-4 border-2 border-gold bg-gold px-7 py-3.5 text-[14px] font-semibold tracking-[0.06em] text-teal-dark transition-colors duration-300 hover:border-cream hover:bg-cream sm:px-9"
             >
-              From the Ground Up
-            </h1>
+              Explore our crops <span aria-hidden="true">→</span>
+            </a>
             <a
               href="#tour"
-              class="inline-block border-2 border-gold bg-gold px-6 py-3.5 text-[14px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-8"
+              class="inline-flex items-center gap-4 border-b border-cream/70 py-2 text-[14px] font-medium tracking-[0.06em] text-cream transition-colors hover:border-gold hover:text-gold"
             >
-              Visit our Farm <span class="pl-2.5">+</span>
+              Visit our farm <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
@@ -568,7 +642,7 @@
               src="images/greenhouse/IMG_3156.jpg"
               alt="A member of the Chasing Sun farm team outside newly built greenhouse tunnels"
               loading="lazy"
-              class="w-full object-cover"
+              class="brand-photo w-full object-cover"
             />
           </div>
         </div>
@@ -608,7 +682,7 @@
               </a>
               <div class="mt-[30px] text-center">
                 <span
-                  class="nums block text-[13px] font-semibold tracking-[0.14em] text-gold"
+                  class="orbit-index nums text-[13px] font-semibold tracking-[0.08em] text-olive"
                   >01</span
                 >
                 <a
@@ -634,7 +708,7 @@
               </a>
               <div class="mt-[30px] text-center">
                 <span
-                  class="nums block text-[13px] font-semibold tracking-[0.14em] text-gold"
+                  class="orbit-index nums text-[13px] font-semibold tracking-[0.08em] text-olive"
                   >02</span
                 >
                 <a
@@ -660,7 +734,7 @@
               </a>
               <div class="mt-[30px] text-center">
                 <span
-                  class="nums block text-[13px] font-semibold tracking-[0.14em] text-gold"
+                  class="orbit-index nums text-[13px] font-semibold tracking-[0.08em] text-olive"
                   >03</span
                 >
                 <a
@@ -1265,9 +1339,8 @@
                   <p
                     class="mt-6 max-w-[42ch] text-[15px] leading-[1.7] text-white/90"
                   >
-                    A Nairobi-based agribusiness taking African produce to
-                    global markets — quality checked and traceable to the
-                    grower.
+                    Premium crops grown and traded for African markets —
+                    quality checked and traceable from source to supply.
                   </p>
                   <p class="mt-4 text-[15px] leading-[1.7] text-white/90">
                     33 Muthithi Road, Nairobi, Kenya<br />
@@ -1517,7 +1590,7 @@
             if (index === 0) image.classList.add("hero-image-load");
           });
 
-          const heroContent = hero?.querySelector(":scope > div");
+          const heroContent = hero?.querySelector("[data-hero-content]");
           heroContent?.classList.add("hero-load");
           heroContent?.style.setProperty("--hero-delay", "320ms");
         }
