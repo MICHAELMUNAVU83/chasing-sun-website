@@ -42,9 +42,15 @@
         theme: {
           extend: {
             colors: {
-              olive: "#173f35",
+              olive: "#5a4308",
               leaf: "#6a961f",
-              gold: "#e9a72f",
+              gold: "#f2b51d",
+              sun: {
+                DEFAULT: "#ffd34e",
+                deep: "#6a4b00",
+                pale: "#fff1b8",
+                wash: "#fff9e8",
+              },
               teal: {
                 DEFAULT: "#245d4f",
                 mid: "#173f35",
@@ -52,9 +58,9 @@
                 light: "#a4d6cf",
                 pale: "#e1f4f2",
               },
-              cream: "#f8f2e6",
+              cream: "#fff8e6",
               muted: "#626963",
-              soft: "#eef1ec",
+              soft: "#fff3c7",
             },
             fontFamily: {
               heading: ['"Playfair Display"', "Georgia", "serif"],
@@ -167,7 +173,7 @@
         width: 0.58rem;
         height: 0.58rem;
         margin-right: 0.65rem;
-        border: 2px solid #e9a72f;
+        border: 2px solid #f2b51d;
         border-radius: 9999px;
         box-shadow: 0 0 0 4px rgb(233 167 47 / 12%);
         vertical-align: 0.02em;
@@ -179,7 +185,7 @@
         width: 2.75rem;
         height: 2.75rem;
         place-items: center;
-        border: 1px solid rgb(23 63 53 / 28%);
+        border: 1px solid rgb(106 75 0 / 30%);
         border-radius: 9999px;
       }
 
@@ -192,11 +198,11 @@
         height: 0.5rem;
         border: 2px solid white;
         border-radius: 9999px;
-        background: #e9a72f;
+        background: #f2b51d;
       }
 
       .brand-photo {
-        box-shadow: 0 1.25rem 3rem rgb(8 44 37 / 12%);
+        box-shadow: 0 1.25rem 3rem rgb(106 75 0 / 16%);
       }
 
       .brand-button {
@@ -301,7 +307,7 @@
 
   <body
     id="top"
-    class="overflow-x-hidden bg-white font-body text-[17px] leading-[1.7] tracking-[0.003em] text-muted antialiased"
+    class="overflow-x-hidden bg-sun-wash font-body text-[17px] leading-[1.7] tracking-[0.003em] text-muted antialiased"
   >
     <!-- ============================ HEADER ============================ -->
     <header
@@ -341,7 +347,7 @@
           >
             <!-- Off-canvas header (mobile only) -->
             <div
-              class="flex items-center justify-between bg-teal px-5 py-4 lg:hidden"
+              class="flex items-center justify-between bg-sun-deep px-5 py-4 lg:hidden"
             >
               <a
                 href="#top"
@@ -482,7 +488,7 @@
           <div class="flex items-center gap-5 py-5 lg:hidden lg:py-0">
             <label
               for="nav-toggle"
-              class="cursor-pointer rounded-[7px] bg-olive p-2.5 text-white lg:hidden"
+              class="cursor-pointer rounded-[7px] bg-gold p-2.5 text-sun-deep lg:hidden"
               aria-label="Open menu"
             >
               <svg
@@ -562,7 +568,7 @@
       >
         <circle cx="400" cy="400" r="248" stroke="currentColor" stroke-width="1" />
         <circle cx="400" cy="400" r="330" stroke="currentColor" stroke-width="1" stroke-dasharray="4 12" />
-        <circle cx="650" cy="400" r="11" fill="#e9a72f" />
+        <circle cx="650" cy="400" r="11" fill="#f2b51d" />
         <circle cx="400" cy="70" r="6" fill="#f8f2e6" />
       </svg>
 
@@ -639,8 +645,8 @@
           </div>
           <div class="w-full md:w-5/12">
             <img
-              src="images/greenhouse/IMG_3156.jpg"
-              alt="A member of the Chasing Sun farm team outside newly built greenhouse tunnels"
+              src="images/greenhouse/ai-greenhouse-sunrise.webp"
+              alt="AI-generated view of greenhouse tunnels and irrigation infrastructure in warm sunrise light"
               loading="lazy"
               class="brand-photo w-full object-cover"
             />
@@ -654,7 +660,7 @@
       id="pillars"
       class="bg-[url('images/greenhouse/IMG_8550.jpg')] bg-cover bg-center bg-no-repeat"
     >
-      <div class="bg-white/90 py-20 md:py-[100px] xl:py-[120px]">
+      <div class="bg-sun-wash/95 py-20 md:py-[100px] xl:py-[120px]">
         <div class="relative mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
           <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-16">
             <div class="mb-4 flex items-center justify-center">
@@ -700,8 +706,8 @@
             <article id="commodity-trading" class="group scroll-mt-28">
               <a href="#produce" class="block overflow-hidden">
                 <img
-                  src="images/greenhouse/PHOTO-2026-08-24-10-37-54.jpg"
-                  alt="Commodity produce prepared for trade"
+                  src="images/greenhouse/ai-dried-ginger.webp"
+                  alt="AI-generated dried ginger prepared for quality-controlled commodity trade"
                   loading="lazy"
                   class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -726,8 +732,8 @@
             <article id="farm-dashboard" class="group scroll-mt-28">
               <a href="#gallery" class="block overflow-hidden">
                 <img
-                  src="images/greenhouse/IMG_3148.jpg"
-                  alt="Drip irrigation lines running the length of a prepared greenhouse bed"
+                  src="images/greenhouse/ai-bed-preparation.webp"
+                  alt="AI-generated precision greenhouse beds with drip irrigation and young transplants"
                   loading="lazy"
                   class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -766,7 +772,7 @@
     <section
       class="bg-[url('images/greenhouse/IMG_8533.jpg')] bg-cover bg-center bg-no-repeat"
     >
-      <div class="bg-olive/90 py-[60px] sm:py-20">
+      <div class="bg-sun-deep/95 py-[60px] sm:py-20">
         <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
           <div
             class="flex flex-col items-center gap-[30px] lg:flex-row lg:gap-0"
@@ -835,8 +841,8 @@
               class="relative flex items-center justify-center overflow-hidden"
             >
               <img
-                src="images/greenhouse/IMG_7528.jpg"
-                alt="A ripe yellow bell pepper picked from the vine"
+                src="images/greenhouse/ai-yellow-peppers.webp"
+                alt="AI-generated yellow bell peppers ripening on healthy greenhouse plants"
                 loading="lazy"
                 class="aspect-[3/4] w-full object-cover"
               />
@@ -862,8 +868,8 @@
               class="relative flex items-center justify-center overflow-hidden"
             >
               <img
-                src="images/greenhouse/IMG_6872.jpg"
-                alt="A long greenhouse cucumber held up beside the vine it grew on"
+                src="images/greenhouse/ai-cucumber.webp"
+                alt="AI-generated market-ready cucumber growing on the greenhouse vine"
                 loading="lazy"
                 class="aspect-[3/4] w-full object-cover"
               />
@@ -917,14 +923,14 @@
     <!-- ============================ FARM TOUR ============================ -->
     <section
       id="tour"
-      class="relative scroll-mt-24 bg-[url('images/greenhouse/IMG_3151.jpg')] bg-cover bg-center"
+      class="relative scroll-mt-24 bg-[url('images/greenhouse/ai-bed-preparation.webp')] bg-cover bg-center"
     >
       <div class="py-[60px] sm:py-20">
         <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
           <div
             class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-0"
           >
-            <div class="bg-olive/90 p-[30px] sm:p-10 xl:p-[50px] 2xl:p-[60px]">
+            <div class="bg-sun-deep/95 p-[30px] sm:p-10 xl:p-[50px] 2xl:p-[60px]">
               <div class="mb-4 flex items-center">
                 <span
                   class="mr-2.5 h-px w-10 bg-white/70"
@@ -1002,13 +1008,13 @@
             class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
           >
             <img
-              src="images/greenhouse/IMG_3149.jpg"
-              alt="A newly prepared greenhouse with drip lines laid before planting"
+              src="images/greenhouse/ai-bed-preparation.webp"
+              alt="AI-generated greenhouse beds with drip lines and young transplants"
               loading="lazy"
               class="h-full w-full object-cover"
             />
             <div
-              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
             >
               <ul class="space-y-[30px]">
                 <li>
@@ -1045,7 +1051,7 @@
               class="h-full w-full object-cover"
             />
             <div
-              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
             >
               <ul class="space-y-[30px]">
                 <li>
@@ -1082,7 +1088,7 @@
               class="h-full w-full object-cover"
             />
             <div
-              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
             >
               <ul class="space-y-[30px]">
                 <li>
@@ -1119,7 +1125,7 @@
               class="h-full w-full object-cover"
             />
             <div
-              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
             >
               <ul class="space-y-[30px]">
                 <li>
@@ -1150,13 +1156,13 @@
             class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
           >
             <img
-              src="images/greenhouse/9d682524-b1a6-4777-a67e-bb110dc9e8c9.jpg"
-              alt="Two agronomists inspecting a newly transplanted crop"
+              src="images/greenhouse/ai-crop-scouting.webp"
+              alt="AI-generated crop scouting setup with a notebook and loupe beside young greenhouse cucumbers"
               loading="lazy"
               class="h-full w-full object-cover"
             />
             <div
-              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
             >
               <ul class="space-y-[30px]">
                 <li>
@@ -1187,13 +1193,13 @@
             class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
           >
             <img
-              src="images/greenhouse/B097AB55-3810-42E7-B0EF-DA89BFE9BAFB.jpg"
-              alt="The farm team positioning a bulk water storage tank"
+              src="images/greenhouse/ai-water-infrastructure.webp"
+              alt="AI-generated farm water tank and irrigation installation in late-afternoon light"
               loading="lazy"
               class="h-full w-full object-cover"
             />
             <div
-              class="absolute bottom-0 left-0 bg-olive px-[50px] pb-[60px] pt-[55px]"
+              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
             >
               <ul class="space-y-[30px]">
                 <li>
@@ -1318,7 +1324,7 @@
     <!-- ============================= FOOTER ============================= -->
     <footer>
       <div
-        class="bg-olive bg-cover bg-center bg-blend-multiply xl:bg-[url('images/greenhouse/IMG_3148.jpg')]"
+        class="bg-sun-deep bg-cover bg-center bg-blend-multiply xl:bg-[url('images/greenhouse/ai-bed-preparation.webp')]"
       >
         <div class="py-20 md:py-[100px] xl:py-[120px]">
           <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
@@ -1554,7 +1560,7 @@
         </div>
       </div>
 
-      <div class="bg-olive/90 py-5 text-center">
+      <div class="bg-sun-deep py-5 text-center">
         <p class="text-[14px] text-white/90">
           © 2026 Chasing Sun Africa.
           <a
