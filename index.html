@@ -8,7 +8,6 @@
       name="description"
       content="Chasing Sun grows and trades premium-quality crops for African markets with a focus on quality, consistency and traceability."
     />
-
     <meta
       property="og:title"
       content="Chasing Sun Africa — From the Ground Up"
@@ -19,1646 +18,1779 @@
     />
     <meta
       property="og:image"
-      content="images/greenhouse/hero-golden-hour-v2.webp"
+      content="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80"
     />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
-      content="images/greenhouse/hero-golden-hour-v2.webp"
+      content="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80"
     />
-
-    <link rel="icon" href="images/greenhouse/CHASING-SUN.webp" />
-
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23005840'/%3E%3Ccircle cx='24' cy='28' r='9' fill='%23A9E000'/%3E%3Cpath d='M8 36h32' stroke='%23A9E000' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
     />
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              olive: "#5a4308",
-              leaf: "#6a961f",
-              gold: "#f2b51d",
-              sun: {
-                DEFAULT: "#ffd34e",
-                deep: "#6a4b00",
-                pale: "#fff1b8",
-                wash: "#fff9e8",
-              },
-              teal: {
-                DEFAULT: "#245d4f",
-                mid: "#173f35",
-                dark: "#082c25",
-                light: "#a4d6cf",
-                pale: "#e1f4f2",
-              },
-              cream: "#fff8e6",
-              muted: "#626963",
-              soft: "#fff3c7",
-            },
-            fontFamily: {
-              heading: ['"Playfair Display"', "Georgia", "serif"],
-              body: ['"DM Sans"', "Helvetica", "Arial", "sans-serif"],
-            },
-            /* One fluid type scale for the whole page. Each step interpolates
-           between its mobile and desktop size, so the headings stop
-           jumping at breakpoints and the ratio between them holds. */
-            fontSize: {
-              display: [
-                "clamp(2.25rem, 1.30rem + 4.20vw, 4.25rem)",
-                { lineHeight: "1.04", letterSpacing: "-0.022em" },
-              ],
-              h2: [
-                "clamp(1.75rem, 1.22rem + 2.35vw, 2.875rem)",
-                { lineHeight: "1.14", letterSpacing: "-0.018em" },
-              ],
-              h3: [
-                "clamp(1.5rem, 1.24rem + 1.15vw, 2.0625rem)",
-                { lineHeight: "1.2", letterSpacing: "-0.015em" },
-              ],
-              h4: [
-                "clamp(1.25rem, 1.13rem + 0.52vw, 1.5rem)",
-                { lineHeight: "1.28", letterSpacing: "-0.012em" },
-              ],
-              h5: [
-                "clamp(1.125rem, 1.07rem + 0.24vw, 1.25rem)",
-                { lineHeight: "1.35", letterSpacing: "-0.008em" },
-              ],
-              /* Uppercase section eyebrow — small, but widely tracked so it
-             reads as a label rather than shrunken body copy. */
-              eyebrow: [
-                "0.8125rem",
-                {
-                  lineHeight: "1.2",
-                  letterSpacing: "0.14em",
-                  fontWeight: "500",
-                },
-              ],
-              lead: [
-                "clamp(1.0625rem, 1.01rem + 0.24vw, 1.1875rem)",
-                { lineHeight: "1.65" },
-              ],
-              stat: [
-                "clamp(1.375rem, 1.20rem + 0.75vw, 1.75rem)",
-                { lineHeight: "1.2", letterSpacing: "-0.015em" },
-              ],
-            },
-            keyframes: {
-              heroFade: {
-                "0%, 45%": { opacity: "0" },
-                "55%, 95%": { opacity: "1" },
-                "100%": { opacity: "0" },
-              },
-              ripple: {
-                "0%": { transform: "scale(1)", opacity: "0.6" },
-                "100%": { transform: "scale(1.6)", opacity: "0" },
-              },
-            },
-            animation: {
-              heroFade: "heroFade 14s ease-in-out infinite",
-              ripple: "ripple 2.4s ease-out infinite",
-              ripple2: "ripple 2.4s ease-out 1.2s infinite",
-            },
+            colors: { primary: "#005840", lime: { brand: "#A9E000" } },
+            fontFamily: { sans: ["Outfit", "Arial", "sans-serif"] },
           },
         },
       };
     </script>
-    <style type="text/tailwindcss">
-      /* Hide the native scrollbar on the CSS-only snap carousels (they stay
-     keyboard- and drag-scrollable, the bar is just visual noise). */
-      .no-scrollbar {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Playfair sets very loose by default at display sizes — pull the
-     tracking in as the type gets bigger so headlines read as one shape. */
-      .font-heading {
-        letter-spacing: -0.015em;
-        font-feature-settings:
-          "kern" 1,
-          "liga" 1;
-      }
-
-      /* Keep headlines from breaking with one orphan word on the last line,
-     and body copy from leaving a single word alone. */
-      h1,
-      h2,
-      h3 {
-        text-wrap: balance;
-      }
-      p {
-        text-wrap: pretty;
-      }
-
-      /* Tabular figures keep stat rows and phone numbers from shifting. */
-      .nums {
-        font-variant-numeric: tabular-nums;
-      }
-
-      /* Brand motif: a restrained sun disc and orbit, used only on section
-         labels and numbered capability markers. */
-      body > section:not(:first-of-type) .text-eyebrow::before {
-        content: "";
-        display: inline-block;
-        width: 0.58rem;
-        height: 0.58rem;
-        margin-right: 0.65rem;
-        border: 2px solid #f2b51d;
-        border-radius: 9999px;
-        box-shadow: 0 0 0 4px rgb(233 167 47 / 12%);
-        vertical-align: 0.02em;
-      }
-
-      .orbit-index {
-        position: relative;
-        display: inline-grid;
-        width: 2.75rem;
-        height: 2.75rem;
-        place-items: center;
-        border: 1px solid rgb(106 75 0 / 30%);
-        border-radius: 9999px;
-      }
-
-      .orbit-index::after {
-        content: "";
-        position: absolute;
-        top: -0.2rem;
-        right: 0.2rem;
-        width: 0.5rem;
-        height: 0.5rem;
-        border: 2px solid white;
-        border-radius: 9999px;
-        background: #f2b51d;
-      }
-
-      .brand-photo {
-        box-shadow: 0 1.25rem 3rem rgb(106 75 0 / 16%);
-      }
-
-      .brand-button {
-        box-shadow: 0 0.75rem 1.75rem rgb(8 44 37 / 16%);
-      }
-
-      a[class*="bg-gold"],
-      button[class*="bg-gold"] {
-        box-shadow: 0 0.65rem 1.5rem rgb(8 44 37 / 14%);
-      }
-
-      .hero-orbit {
-        animation: orbitDrift 18s ease-in-out infinite alternate;
-        transform-origin: center;
-      }
-
-      @keyframes orbitDrift {
-        to {
-          transform: rotate(7deg) translate3d(0, -8px, 0);
-        }
-      }
-
-      /* Motion system: composited transforms keep the entrance animation
-         smooth, while IntersectionObserver avoids doing work during scroll. */
-      .motion-item {
-        opacity: 0;
-        transform: translate3d(0, 38px, 0);
-        filter: blur(5px);
-        transition:
-          opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
-          transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
-          filter 700ms ease;
-        transition-delay: var(--motion-delay, 0ms);
-        will-change: opacity, transform;
-      }
-
-      .motion-item[data-motion="left"] {
-        transform: translate3d(-44px, 0, 0);
-      }
-
-      .motion-item[data-motion="right"] {
-        transform: translate3d(44px, 0, 0);
-      }
-
-      .motion-item[data-motion="scale"] {
-        transform: scale(0.965);
-      }
-
-      .motion-item.is-visible {
-        opacity: 1;
-        transform: translate3d(0, 0, 0) scale(1);
-        filter: blur(0);
-      }
-
-      .hero-load {
-        opacity: 0;
-        transform: translate3d(0, 24px, 0);
-        animation: heroEntrance 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        animation-delay: var(--hero-delay, 0ms);
-      }
-
-      .hero-image-load {
-        animation: heroImageEntrance 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-      }
-
-      @keyframes heroEntrance {
-        to {
-          opacity: 1;
-          transform: translate3d(0, 0, 0);
-        }
-      }
-
-      @keyframes heroImageEntrance {
+    <style>
+      @keyframes fade-up {
         from {
           opacity: 0;
-          transform: scale(1.045);
+          transform: translateY(40px);
         }
         to {
           opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateX(-80px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes ken-burns {
+        from {
+          transform: scale(1.15);
+        }
+        to {
           transform: scale(1);
         }
       }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto !important;
+      @keyframes drift {
+        0%,
+        100% {
+          transform: translateY(0);
         }
+        50% {
+          transform: translateY(8px);
+        }
+      }
+      @keyframes spin-slow {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .hero-in {
+          animation: fade-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+        }
+        .hero-slide {
+          animation: slide-in 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+        }
+        .ken-burns {
+          animation: ken-burns 12s ease-out both;
+        }
+        .drift {
+          animation: drift 2.4s ease-in-out infinite;
+        }
+        .sun-rays {
+          transform-origin: 24px 28px;
+          animation: spin-slow 20s linear infinite;
+        }
+        .d1 {
+          animation-delay: 0.15s;
+        }
+        .d2 {
+          animation-delay: 0.35s;
+        }
+        .d3 {
+          animation-delay: 0.55s;
+        }
+        .d4 {
+          animation-delay: 0.75s;
+        }
+        /* Scroll reveal: only where scroll-driven animations exist, so content never stays hidden */
+        @supports (animation-timeline: view()) {
+          .reveal {
+            animation: fade-up linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 60%;
+          }
+          .reveal-x {
+            animation: slide-in linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 60%;
+          }
+          .reveal-fade {
+            animation: fade-in linear both;
+            animation-timeline: view();
+            animation-range: entry 10% cover 40%;
+          }
+        }
+      }
 
-        .motion-item,
-        .hero-load,
-        .hero-image-load,
-        .hero-orbit {
-          opacity: 1 !important;
-          transform: none !important;
-          filter: none !important;
-          animation: none !important;
-          transition: none !important;
+      @keyframes marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes blob {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(60px, -40px) scale(1.2);
+        }
+        66% {
+          transform: translate(-40px, 30px) scale(0.9);
+        }
+      }
+      @keyframes shimmer {
+        to {
+          background-position: 200% center;
+        }
+      }
+      @keyframes pulse-ring {
+        0% {
+          box-shadow: 0 0 0 0 rgba(169, 224, 0, 0.7);
+        }
+        100% {
+          box-shadow: 0 0 0 12px rgba(169, 224, 0, 0);
+        }
+      }
+      @keyframes scroll-dot {
+        0% {
+          opacity: 0;
+          transform: translateY(0);
+        }
+        40% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes wipe {
+        from {
+          clip-path: inset(0 100% 0 0);
+        }
+        to {
+          clip-path: inset(0 0 0 0);
+        }
+      }
+      @keyframes zoom-in {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes flip-in {
+        from {
+          opacity: 0;
+          transform: perspective(800px) rotateY(-35deg) translateX(60px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes progress {
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+      @keyframes shrink {
+        to {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          background-color: rgba(0, 88, 64, 1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+      }
+      @keyframes parallax {
+        from {
+          transform: translateY(-12%) scale(1.25);
+        }
+        to {
+          transform: translateY(12%) scale(1.25);
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0);
+        }
+        50% {
+          transform: translateY(-14px) rotate(3deg);
+        }
+      }
+      @keyframes wiggle {
+        0%,
+        100% {
+          transform: rotate(0);
+        }
+        25% {
+          transform: rotate(-12deg);
+        }
+        75% {
+          transform: rotate(12deg);
+        }
+      }
+      @keyframes letter-rise {
+        from {
+          opacity: 0;
+          transform: translateY(60%) rotate(8deg);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .marquee {
+          animation: marquee 28s linear infinite;
+        }
+        .marquee-rev {
+          animation: marquee 34s linear infinite reverse;
+        }
+        .marquee-wrap:hover .marquee,
+        .marquee-wrap:hover .marquee-rev {
+          animation-play-state: paused;
+        }
+        .blob {
+          animation: blob 14s ease-in-out infinite;
+        }
+        .blob-2 {
+          animation: blob 18s ease-in-out infinite reverse;
+        }
+        .shimmer {
+          background: linear-gradient(
+            90deg,
+            #a9e000 0%,
+            #a9e000 40%,
+            #f4ffc2 50%,
+            #a9e000 60%,
+            #a9e000 100%
+          );
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: shimmer 4s linear infinite;
+        }
+        .pulse-dot {
+          animation: pulse-ring 1.6s ease-out infinite;
+        }
+        .scroll-dot {
+          animation: scroll-dot 1.8s ease-in-out infinite;
+        }
+        .spin-badge {
+          animation: spin-slow 16s linear infinite;
+        }
+        .float {
+          animation: float 5s ease-in-out infinite;
+        }
+        .group:hover .wiggle {
+          animation: wiggle 0.5s ease-in-out;
+        }
+        .letter {
+          display: inline-block;
+          animation: letter-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+        }
+        .shine {
+          position: relative;
+          overflow: hidden;
+        }
+        .shine::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          transform: translateX(-120%) skewX(-20deg);
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent
+          );
+          transition: transform 0.7s;
+        }
+        .shine:hover::after {
+          transform: translateX(120%) skewX(-20deg);
+        }
+        .nav-u {
+          position: relative;
+        }
+        .nav-u::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 100%;
+          background: currentColor;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.35s;
+        }
+        .nav-u:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+        @supports (animation-timeline: scroll()) {
+          .progress-bar {
+            transform-origin: left;
+            animation: progress linear both;
+            animation-timeline: scroll(root);
+          }
+          .shrink-on-scroll {
+            animation: shrink linear both;
+            animation-timeline: scroll(root);
+            animation-range: 0 200px;
+          }
+        }
+        @supports (animation-timeline: view()) {
+          .reveal-zoom {
+            animation: zoom-in linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 70%;
+          }
+          .reveal-flip {
+            animation: flip-in linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 80%;
+          }
+          .reveal-wipe {
+            animation: wipe linear both;
+            animation-timeline: view();
+            animation-range: entry 10% cover 45%;
+          }
+          .parallax {
+            animation: parallax linear both;
+            animation-timeline: view();
+          }
+          .stagger-1 {
+            animation-range: entry 10% entry 70%;
+          }
+          .stagger-2 {
+            animation-range: entry 25% entry 85%;
+          }
+          .stagger-3 {
+            animation-range: entry 40% entry 100%;
+          }
         }
       }
     </style>
   </head>
-
-  <body
-    id="top"
-    class="overflow-x-hidden bg-sun-wash font-body text-[17px] leading-[1.7] tracking-[0.003em] text-muted antialiased"
-  >
-    <!-- ============================ HEADER ============================ -->
-    <header
-      class="absolute top-0 z-20 w-full bg-[linear-gradient(180deg,#fff,#fff_85%,rgba(255,255,255,0))]"
+  <body class="font-sans antialiased text-[#005840]">
+    <!-- Hero -->
+    <section
+      id="top"
+      class="relative overflow-hidden min-h-screen w-full bg-[#005840]"
     >
-      <div class="px-5 2xl:px-[60px]">
-        <div class="flex items-center justify-between gap-4">
-          <!-- Logo -->
-          <div class="shrink-0 py-5 lg:py-0">
-            <a
-              href="#top"
-              class="inline-flex items-center gap-2.5"
-              aria-label="Chasing Sun Africa — home"
-            >
-              <img
-                src="images/greenhouse/CHASING-SUN.webp"
-                alt="Chasing Sun Africa"
-                class="h-16 w-auto object-contain sm:h-20"
-              />
+      <header
+        class="fixed top-0 left-0 right-0 z-50 bg-[#005840]/95 backdrop-blur-sm"
+      >
+        <div
+          class="progress-bar absolute top-0 left-0 h-1 w-full bg-[#A9E000]"
+        ></div>
+        <input type="checkbox" id="nav-toggle" class="peer hidden" />
+        <div class="shrink-on-scroll px-4 md:px-6 lg:px-10 py-4">
+          <div class="flex justify-between items-center gap-6">
+            <a href="#top" class="inline-flex items-center gap-3 h-12">
+              <svg class="h-full w-auto" viewBox="0 0 48 48" aria-hidden="true">
+                <rect width="48" height="48" rx="12" fill="#A9E000" />
+                <circle cx="24" cy="28" r="9" fill="#005840" />
+                <path
+                  class="sun-rays"
+                  d="M24 8v5M11 15l3 3M37 15l-3 3"
+                  stroke="#005840"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 36h32"
+                  stroke="#005840"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span
+                class="font-bold text-[#A9E000] text-xl md:text-2xl tracking-wide"
+                >Chasing Sun</span
+              >
             </a>
-          </div>
-
-          <!-- Nav toggle state (CSS-only off-canvas menu) -->
-          <input type="checkbox" id="nav-toggle" class="peer hidden" />
-
-          <!-- Backdrop -->
-          <label
-            for="nav-toggle"
-            aria-hidden="true"
-            class="fixed inset-0 z-[66] hidden bg-black/50 peer-checked:block lg:peer-checked:hidden"
-          ></label>
-
-          <!-- Off-canvas / inline navigation -->
-          <nav
-            class="fixed left-0 top-0 z-[67] flex h-full w-80 max-w-[85vw] -translate-x-full flex-col overflow-y-auto bg-white shadow-[1px_1px_3px_0_rgba(0,0,0,0.25)] transition-transform duration-300 peer-checked:translate-x-0 lg:static lg:h-auto lg:w-auto lg:max-w-none lg:flex-1 lg:translate-x-0 lg:flex-row lg:items-center lg:justify-center lg:overflow-visible lg:bg-transparent lg:shadow-none"
-            aria-label="Main"
-          >
-            <!-- Off-canvas header (mobile only) -->
-            <div
-              class="flex items-center justify-between bg-sun-deep px-5 py-4 lg:hidden"
+            <nav
+              class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-sm font-medium uppercase tracking-wider text-[#A9E000]"
             >
               <a
                 href="#top"
-                class="inline-flex items-center gap-2.5"
-                aria-label="Chasing Sun Africa — home"
+                class="nav-u py-2 hover:text-white transition-colors"
+                >Home</a
               >
-                <img
-                  src="images/greenhouse/CHASING-SUN.webp"
-                  alt="Chasing Sun Africa"
-                  class="h-14 w-auto object-contain"
-                />
-              </a>
-              <label
-                for="nav-toggle"
-                class="cursor-pointer rounded-md p-1.5 text-white hover:bg-white/15"
-                aria-label="Close menu"
+              <a
+                href="#horticulture"
+                class="nav-u py-2 hover:text-white transition-colors"
+                >Horticulture</a
               >
-                <svg
-                  class="h-6 w-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </label>
-            </div>
-
-            <a
-              href="#top"
-              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:font-bold hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-bold xl:pl-5"
-              >Home</a
-            >
-            <a
-              href="#horticulture"
-              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
-              >Horticulture</a
-            >
-            <a
-              href="#commodity-trading"
-              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
-              >Commodity Trade</a
-            >
-            <a
-              href="#farm-dashboard"
-              class="flex justify-between border-b border-black/5 px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
-              >Farm Dashboard</a
-            >
-
-            <!-- Dropdown: opens on hover / keyboard focus, no JS -->
-            <div class="group relative lg:static">
-              <button
-                type="button"
-                class="flex w-full items-center justify-between gap-1.5 border-b border-black/5 px-5 py-5 text-left text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:w-auto lg:border-0 lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:group-hover:font-bold lg:group-hover:text-teal-mid xl:pl-5"
-                aria-haspopup="true"
+              <a
+                href="#commodity-trading"
+                class="nav-u py-2 hover:text-white transition-colors"
+                >Commodity Trade</a
               >
-                <span>The Farm</span>
-                <svg
-                  class="h-4 w-4 transition-transform lg:group-hover:rotate-180"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </button>
-              <div
-                class="bg-cream/60 lg:absolute lg:left-[15px] lg:top-full lg:z-30 lg:hidden lg:w-[225px] lg:-translate-y-2 lg:rounded-sm lg:bg-white lg:shadow-[1px_1px_3px_0_rgba(0,0,0,0.15)] lg:group-focus-within:block lg:group-hover:block"
+              <a
+                href="#farm-dashboard"
+                class="nav-u py-2 hover:text-white transition-colors"
+                >Farm Dashboard</a
               >
-                <a
-                  href="#about"
-                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
-                  >Who We Are</a
+              <div class="group relative">
+                <button
+                  type="button"
+                  class="py-2 uppercase tracking-wider inline-flex items-center gap-1 hover:text-white"
                 >
-                <a
-                  href="#produce"
-                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
-                  >What We Grow</a
+                  The Farm
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                    aria-hidden="true"
+                  >
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+                <div
+                  class="hidden group-hover:block group-focus-within:block group-hover:[animation:fade-up_0.25s_ease-out] absolute left-0 top-full pt-2"
                 >
-                <a
-                  href="#gallery"
-                  class="block border-b border-[#e2e2e2] px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
-                  >Farm Gallery</a
-                >
-                <a
-                  href="#tour"
-                  class="block px-8 py-3 text-[15px] text-[#5b5b5b] transition-transform hover:translate-x-[3px] hover:text-teal lg:px-5"
-                  >Book a Tour</a
-                >
+                  <div
+                    class="w-52 bg-[#005840] border border-[#A9E000]/30 shadow-lg py-2"
+                  >
+                    <a
+                      href="#about"
+                      class="block px-4 py-2 hover:bg-white/10 hover:text-white"
+                      >Who We Are</a
+                    >
+                    <a
+                      href="#produce"
+                      class="block px-4 py-2 hover:bg-white/10 hover:text-white"
+                      >What We Grow</a
+                    >
+                    <a
+                      href="#gallery"
+                      class="block px-4 py-2 hover:bg-white/10 hover:text-white"
+                      >Farm Gallery</a
+                    >
+                    <a
+                      href="#tour"
+                      class="block px-4 py-2 hover:bg-white/10 hover:text-white"
+                      >Book a Tour</a
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-
+              <a
+                href="#contact"
+                class="nav-u py-2 hover:text-white transition-colors"
+                >Help &amp; Contact</a
+              >
+            </nav>
             <a
-              href="#contact"
-              class="flex justify-between px-5 py-5 text-[15px] font-medium tracking-[0.01em] text-teal-mid transition-colors hover:text-olive lg:block lg:py-10 lg:pl-[15px] lg:pr-0 lg:font-normal lg:hover:font-bold lg:hover:text-teal-mid xl:pl-5"
-              >Help &amp; Contact</a
-            >
-
-            <!-- Phone contact, surfaced inside the drawer on mobile -->
-            <div
-              class="mt-10 flex items-center gap-2.5 border-t border-black/5 px-5 pt-6 lg:hidden"
+              href="tel:+254711549108"
+              class="shine pulse-dot hidden xl:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A9E000] text-[#005840] text-sm font-semibold"
             >
               <svg
-                class="h-7 w-7 shrink-0 text-gold"
+                xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                class="h-4 w-4"
                 aria-hidden="true"
               >
                 <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
-                />
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
               </svg>
-              <div>
-                <div class="text-[13px] uppercase tracking-[0.12em] text-muted">
-                  Call us:
-                </div>
-                <a href="tel:+254711549108" class="nums text-[17px] text-olive"
-                  ><strong>+254 711 549108</strong></a
-                >
-              </div>
-            </div>
-          </nav>
-
-          <!-- Hamburger (mobile only) -->
-          <div class="flex items-center gap-5 py-5 lg:hidden lg:py-0">
+              Call us: +254 711 549108
+            </a>
             <label
               for="nav-toggle"
-              class="cursor-pointer rounded-[7px] bg-gold p-2.5 text-sun-deep lg:hidden"
-              aria-label="Open menu"
+              class="lg:hidden cursor-pointer text-[#A9E000] p-2 hover:bg-white/10 rounded-lg transition-colors"
+              aria-label="Toggle menu"
             >
               <svg
-                class="h-5 w-5"
-                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
                 fill="none"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
               >
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </label>
           </div>
+        </div>
+        <nav
+          class="hidden peer-checked:flex lg:!hidden flex-col px-4 pb-4 space-y-1 text-sm font-medium uppercase tracking-wider text-[#A9E000]"
+        >
+          <a href="#top" class="nav-u py-2 hover:text-white transition-colors"
+            >Home</a
+          >
+          <a
+            href="#horticulture"
+            class="nav-u py-2 hover:text-white transition-colors"
+            >Horticulture</a
+          >
+          <a
+            href="#commodity-trading"
+            class="nav-u py-2 hover:text-white transition-colors"
+            >Commodity Trade</a
+          >
+          <a
+            href="#farm-dashboard"
+            class="nav-u py-2 hover:text-white transition-colors"
+            >Farm Dashboard</a
+          >
+          <span class="pt-3 text-xs text-white/60">The Farm</span>
+          <a href="#about" class="py-2 pl-3 hover:text-white">Who We Are</a>
+          <a href="#produce" class="py-2 pl-3 hover:text-white">What We Grow</a>
+          <a href="#gallery" class="py-2 pl-3 hover:text-white">Farm Gallery</a>
+          <a href="#tour" class="py-2 pl-3 hover:text-white">Book a Tour</a>
+          <a
+            href="#contact"
+            class="nav-u py-2 hover:text-white transition-colors"
+            >Help &amp; Contact</a
+          >
+          <a href="tel:+254711549108" class="py-2 text-white"
+            >Call us: +254 711 549108</a
+          >
+        </nav>
+      </header>
+      <img
+        src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1400&q=80"
+        alt="Greenhouse tunnels and fields in warm golden-hour light"
+        class="ken-burns absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#005840] via-[#005840]/85 to-[#005840]/40"
+      ></div>
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          class="blob absolute top-1/4 right-1/4 w-72 h-72 bg-[#A9E000]/25 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="blob-2 absolute bottom-1/4 right-10 w-96 h-96 bg-[#D9E74C]/20 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="blob absolute top-10 left-1/3 w-56 h-56 bg-white/10 rounded-full blur-3xl"
+        ></div>
+      </div>
+      <div
+        class="hidden md:block absolute right-10 bottom-24 z-10 w-40 h-40 hero-in d4"
+      >
+        <svg
+          viewBox="0 0 200 200"
+          class="spin-badge w-full h-full text-[#A9E000]"
+          aria-hidden="true"
+        >
+          <defs>
+            <path
+              id="badge-circle"
+              d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"
+            />
+          </defs>
+          <text font-size="14" font-weight="600" fill="currentColor">
+            <textPath
+              href="#badge-circle"
+              textLength="486"
+              lengthAdjust="spacing"
+            >
+              GROWN TO SPEC • YEAR ROUND • NAIVASHA •
+            </textPath>
+          </text>
+        </svg>
+        <svg
+          viewBox="0 0 24 24"
+          class="float absolute inset-0 m-auto w-12 h-12 text-[#A9E000]"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+          />
+        </svg>
+      </div>
+      <a
+        href="#about"
+        class="hero-in d4 absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-[#A9E000] text-xs uppercase tracking-widest"
+        aria-label="Scroll down"
+      >
+        <span
+          class="w-6 h-10 rounded-full border-2 border-[#A9E000] flex justify-center pt-2"
+          ><span class="scroll-dot w-1.5 h-1.5 rounded-full bg-[#A9E000]"></span
+        ></span>
+        Scroll
+      </a>
+      <div
+        class="relative z-10 flex flex-col justify-center min-h-screen px-4 md:px-6 lg:px-10 pt-24"
+      >
+        <p
+          class="hero-in text-white text-sm md:text-base font-medium tracking-[0.3em] uppercase mb-6"
+        >
+          We produce with purpose
+        </p>
+        <h1
+          class="text-[#A9E000] font-medium leading-[0.85] tracking-tight"
+          style="font-size: clamp(3.5rem, 13vw, 14rem)"
+        >
+          <span class="block"
+            ><span class="letter" style="animation-delay: 0.2s">F</span
+            ><span class="letter" style="animation-delay: 0.25s">R</span
+            ><span class="letter" style="animation-delay: 0.3s">O</span
+            ><span class="letter" style="animation-delay: 0.35s">M</span
+            ><span class="letter" style="animation-delay: 0.4s">&nbsp;</span
+            ><span class="letter" style="animation-delay: 0.45s">T</span
+            ><span class="letter" style="animation-delay: 0.5s">H</span
+            ><span class="letter" style="animation-delay: 0.55s">E</span></span
+          ><span class="block hero-slide d3"
+            ><span class="shimmer">GROUND&nbsp;UP</span></span
+          >
+        </h1>
+        <p
+          class="hero-in d3 mt-8 max-w-2xl text-white text-lg md:text-2xl font-light leading-relaxed"
+        >
+          Premium crops grown and traded for African markets with quality,
+          consistency and traceability at every step.
+        </p>
+        <div class="hero-in d4 mt-10 flex flex-wrap gap-4">
+          <a
+            href="#produce"
+            class="shine px-6 py-3 rounded-full bg-[#A9E000] text-[#005840] font-semibold hover:bg-white transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            >Explore our crops <span class="drift inline-block">&rarr;</span></a
+          >
+          <a
+            href="#tour"
+            class="shine px-6 py-3 rounded-full border-2 border-[#A9E000] text-[#A9E000] font-semibold hover:bg-[#A9E000]/10 transition-colors"
+            >Visit our farm &nearr;</a
+          >
+        </div>
+      </div>
+    </section>
 
-          <!-- Phone contact (desktop) -->
-          <div
-            class="hidden shrink-0 lg:flex lg:items-center lg:justify-end lg:gap-2.5 lg:px-2.5"
+    <div
+      class="marquee-wrap overflow-hidden bg-[#A9E000] text-[#005840] py-5 border-y border-black/10"
+      aria-hidden="true"
+    >
+      <div
+        class="marquee flex w-max whitespace-nowrap text-2xl md:text-4xl font-semibold uppercase tracking-wide"
+      >
+        <span class="mx-8 inline-flex items-center gap-8"
+          >Coloured capsicum<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Cucumber<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Ginger<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Hibiscus<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Chamomile<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Herbs &amp; botanicals<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Traceable<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Year round<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Coloured capsicum<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Cucumber<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Ginger<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Hibiscus<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Chamomile<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Herbs &amp; botanicals<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Traceable<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Year round<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg
+        ></span>
+      </div>
+    </div>
+
+    <!-- Who We Are -->
+    <section id="about">
+      <div class="grid grid-cols-1 md:grid-cols-5 bg-[#A9E000]">
+        <div class="reveal-wipe md:col-span-2 min-h-[360px] overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=1080&q=80"
+            alt="Greenhouse at sunrise"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div
+          class="md:col-span-3 flex flex-col justify-center px-10 md:px-20 py-16"
+        >
+          <h2
+            class="reveal text-5xl md:text-6xl font-bold leading-tight tracking-[-1px] mb-8"
+          >
+            Who we are
+          </h2>
+          <p class="text-[20px] md:text-[22px] font-medium text-justify">
+            Chasing Sun is an agrienterprise working at the intersection of
+            agriculture, technology and market intelligence. Our farm sits
+            between Mount Longonot and Lake Naivasha, where
+            controlled-environment greenhouses let us grow to specification,
+            year round, for professional buyers.
+          </p>
+          <a
+            href="#pillars"
+            class="shine mt-10 self-start px-6 py-3 rounded-full bg-[#005840] text-[#A9E000] font-semibold hover:bg-[#004530] transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            >What We Do &rarr;</a
+          >
+        </div>
+      </div>
+      <div class="bg-gray-100 py-24 px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto text-center">
+          <div class="reveal-zoom stagger-1">
+            <h2
+              class="reveal text-5xl md:text-7xl font-bold tracking-[-1px] mb-8"
+            >
+              Vision
+            </h2>
+            <p class="font-medium text-[18px] md:text-[22px]">
+              A dependable agricultural future defined by quality and integrity.
+            </p>
+          </div>
+          <div class="reveal-zoom stagger-2">
+            <h2
+              class="reveal text-5xl md:text-7xl font-bold tracking-[-1px] mb-8"
+            >
+              Mission
+            </h2>
+            <p class="font-medium text-[18px] md:text-[22px]">
+              To eradicate food insecurity in Africa and beyond.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do -->
+    <section id="pillars" class="bg-[#005840] py-24 px-4 sm:px-6 lg:px-10">
+      <h2
+        class="reveal max-w-5xl text-3xl md:text-5xl font-semibold leading-tight text-[#A9E000] mb-16"
+      >
+        We grow and trade premium-quality crops for African markets, with a
+        focus on quality, consistency and traceability.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <article
+          id="horticulture"
+          class="reveal-flip stagger-1 group scroll-mt-24 bg-white shadow-lg flex flex-col overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1080&q=80"
+            alt="Greenhouse horticulture"
+            loading="lazy"
+            class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="bg-[#D9E74C] p-6 flex-grow">
+            <span class="wiggle inline-block text-lg font-light">01</span>
+            <h3 class="text-3xl lg:text-4xl font-bold mt-1 mb-4">
+              Horticulture
+            </h3>
+            <p class="text-lg">
+              Greenhouse production focused on efficient growing cycles and
+              market-led crop planning.
+            </p>
+          </div>
+        </article>
+        <article
+          id="commodity-trading"
+          class="reveal-flip stagger-2 group scroll-mt-24 bg-white shadow-lg flex flex-col overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=1080&q=80"
+            alt="Dried ginger"
+            loading="lazy"
+            class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="bg-[#D9E74C] p-6 flex-grow">
+            <span class="wiggle inline-block text-lg font-light">02</span>
+            <h3 class="text-3xl lg:text-4xl font-bold mt-1 mb-4">
+              Commodity Trade
+            </h3>
+            <p class="text-lg">
+              High-value dried botanicals and spices — ginger, hibiscus and
+              chamomile — sourced to spec.
+            </p>
+          </div>
+        </article>
+        <article
+          id="farm-dashboard"
+          class="reveal-flip stagger-3 group scroll-mt-24 bg-white shadow-lg flex flex-col overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1080&q=80"
+            alt="Bed preparation in the field"
+            loading="lazy"
+            class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="bg-[#D9E74C] p-6 flex-grow">
+            <span class="wiggle inline-block text-lg font-light">03</span>
+            <h3 class="text-3xl lg:text-4xl font-bold mt-1 mb-4">
+              Farm Dashboard
+            </h3>
+            <p class="text-lg">
+              Our dashboard brings irrigation monitoring, production tracking
+              and farm records into one place.
+            </p>
+          </div>
+        </article>
+      </div>
+      <a
+        href="#contact"
+        class="inline-block mt-12 px-6 py-3 rounded-full bg-[#A9E000] text-[#005840] font-semibold hover:bg-white transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+        >Request a Quote &rarr;</a
+      >
+    </section>
+
+    <!-- Bulk & Export Orders -->
+    <section class="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80"
+        alt=""
+        loading="lazy"
+        class="parallax w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0"
+        style="
+          background: linear-gradient(
+            180deg,
+            rgba(0, 72, 48, 0.9) 0%,
+            rgba(0, 72, 48, 0.6) 25%,
+            rgba(0, 72, 48, 0.7) 50%,
+            rgba(0, 72, 48, 0.6) 75%,
+            rgba(0, 72, 48, 0.9) 100%
+          );
+        "
+      ></div>
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center text-center px-6"
+      >
+        <p
+          class="text-[#A9E000] text-sm md:text-base tracking-[0.3em] uppercase mb-6"
+        >
+          Bulk &amp; Export Orders
+        </p>
+        <h2
+          class="reveal max-w-5xl text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8"
+        >
+          Quality you can count on. Supply you can rely on.
+        </h2>
+        <p class="text-lg md:text-2xl text-white mb-10">
+          Tell us the quantity and grade you need — we’ll handle the rest.
+        </p>
+        <a
+          href="#contact"
+          class="shine px-6 py-3 rounded-full bg-[#A9E000] text-[#005840] font-semibold hover:bg-white transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+          >Contact Us &rarr;</a
+        >
+      </div>
+    </section>
+
+    <!-- What We Grow -->
+    <section id="produce" class="bg-[#A9E000] py-20 px-4 md:px-10 lg:px-20">
+      <p
+        class="reveal-fade text-sm md:text-base tracking-[0.3em] uppercase mb-4"
+      >
+        From Our Greenhouses
+      </p>
+      <h2
+        class="reveal text-5xl md:text-7xl lg:text-8xl font-semibold leading-tight tracking-[-0.5px] mb-12"
+      >
+        Precision growing, built for market demand.
+      </h2>
+      <div class="space-y-8">
+        <div
+          class="reveal-x group flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12 border-t border-black pt-6"
+        >
+          <div class="w-full md:w-1/4">
+            <span class="text-[16px] md:text-[18px] font-light"
+              >Grown to grade</span
+            >
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold mt-1">
+              Coloured capsicum
+            </h3>
+          </div>
+          <p class="w-full md:w-1/2 text-[16px] md:text-[18px] lg:text-[20px]">
+            Trellised, drip-fed and picked by colour and size against the
+            buyer's grade sheet.
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=1080&q=80"
+            alt="Yellow peppers"
+            loading="lazy"
+            class="w-full h-[200px] md:w-[250px] md:h-[150px] object-cover transition duration-500 group-hover:scale-105 group-hover:rotate-1 group-hover:shadow-xl"
+          />
+        </div>
+        <div
+          class="reveal-x group flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12 border-t border-black pt-6"
+        >
+          <div class="w-full md:w-1/4">
+            <span class="text-[16px] md:text-[18px] font-light"
+              >Year-round supply</span
+            >
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold mt-1">
+              Cucumber
+            </h3>
+          </div>
+          <p class="w-full md:w-1/2 text-[16px] md:text-[18px] lg:text-[20px]">
+            Staggered planting under cover keeps volumes steady outside the
+            open-field season.
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=1080&q=80"
+            alt="Cucumbers"
+            loading="lazy"
+            class="w-full h-[200px] md:w-[250px] md:h-[150px] object-cover transition duration-500 group-hover:scale-105 group-hover:rotate-1 group-hover:shadow-xl"
+          />
+        </div>
+        <div
+          class="reveal-x group flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12 border-t border-black pt-6"
+        >
+          <div class="w-full md:w-1/4">
+            <span class="text-[16px] md:text-[18px] font-light"
+              >Grown for drying</span
+            >
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold mt-1">
+              Herbs &amp; botanicals
+            </h3>
+          </div>
+          <p class="w-full md:w-1/2 text-[16px] md:text-[18px] lg:text-[20px]">
+            Aromatics destined for tea manufacturers, spice blenders and
+            value-addition companies.
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1080&q=80"
+            alt="Dried hibiscus flowers and herbs"
+            loading="lazy"
+            class="w-full h-[200px] md:w-[250px] md:h-[150px] object-cover transition duration-500 group-hover:scale-105 group-hover:rotate-1 group-hover:shadow-xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Book a Tour -->
+    <section
+      id="tour"
+      class="bg-[#FAF6EB] flex flex-col md:flex-row items-center justify-around gap-12 py-20 px-6 md:px-20"
+    >
+      <div class="md:w-1/2">
+        <p
+          class="reveal-fade text-sm md:text-base tracking-[0.3em] uppercase mb-4"
+        >
+          Book a farm tour
+        </p>
+        <h2
+          class="reveal text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-[-1px] mb-8"
+        >
+          Come see how we grow
+        </h2>
+        <p class="font-medium text-[18px] md:text-[20px] text-justify mb-10">
+          Farm visits run on Mondays and Fridays by advance booking. Email or
+          call ahead and we will arrange a walk-through of the tunnels, the
+          irrigation setup and the packing process.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a
+            href="mailto:admin@chasingsun.africa?subject=Farm%20tour%20booking"
+            class="shine px-6 py-3 rounded-full bg-[#005840] text-[#A9E000] font-semibold hover:bg-[#004530] transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            >Book a Tour &rarr;</a
+          >
+          <span
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#005840] text-sm font-medium"
           >
             <svg
-              class="h-9 w-9 shrink-0 text-gold"
+              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
+              class="h-4 w-4"
               aria-hidden="true"
             >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
-              />
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
             </svg>
-            <div>
-              <div class="text-[13px] uppercase tracking-[0.12em] text-muted">
-                Call us:
-              </div>
-              <a
-                href="tel:+254711549108"
-                class="nums text-[17px] text-olive transition-colors hover:text-teal"
-                ><strong>+254 711 549108</strong></a
-              >
-            </div>
-          </div>
+            <span class="pulse-dot w-2.5 h-2.5 rounded-full bg-[#A9E000]"></span
+            >Mon &amp; Fri — By advance booking
+          </span>
         </div>
       </div>
-    </header>
+      <div
+        class="reveal-wipe md:w-2/5 w-full h-[500px] md:h-[650px] overflow-hidden group"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1080&q=80"
+          alt="Walking through the greenhouse tunnels"
+          loading="lazy"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
+    </section>
 
-    <!-- ============================= HERO ============================= -->
-    <section
-      class="relative isolate min-h-[660px] overflow-hidden bg-teal-dark sm:min-h-[760px] lg:min-h-[860px]"
+    <div
+      class="marquee-wrap overflow-hidden bg-[#005840] text-[#A9E000] py-5 border-y border-black/10"
+      aria-hidden="true"
     >
-      <img
-        src="images/greenhouse/hero-golden-hour-v2.webp"
-        alt="Chasing Sun greenhouse tunnels and fields in warm golden-hour light"
-        fetchpriority="high"
-        class="absolute inset-0 -z-30 h-full w-full object-cover object-[58%_center]"
-      />
       <div
-        class="absolute inset-0 -z-20 bg-gradient-to-r from-teal-dark/95 via-teal-dark/70 to-teal-dark/5"
-        aria-hidden="true"
-      ></div>
-      <div
-        class="absolute inset-0 -z-20 bg-gradient-to-t from-teal-dark/55 via-transparent to-teal-dark/20"
-        aria-hidden="true"
-      ></div>
-
-      <svg
-        class="hero-orbit pointer-events-none absolute -right-40 top-20 -z-10 h-[560px] w-[560px] text-cream/35 sm:-right-24 sm:h-[700px] sm:w-[700px] lg:right-[-5%] lg:h-[850px] lg:w-[850px]"
-        viewBox="0 0 800 800"
-        fill="none"
-        aria-hidden="true"
+        class="marquee-rev flex w-max whitespace-nowrap text-2xl md:text-4xl font-semibold uppercase tracking-wide"
       >
-        <circle cx="400" cy="400" r="248" stroke="currentColor" stroke-width="1" />
-        <circle cx="400" cy="400" r="330" stroke="currentColor" stroke-width="1" stroke-dasharray="4 12" />
-        <circle cx="650" cy="400" r="11" fill="#f2b51d" />
-        <circle cx="400" cy="70" r="6" fill="#f8f2e6" />
-      </svg>
+        <span class="mx-8 inline-flex items-center gap-8"
+          >Coloured capsicum<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Cucumber<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Ginger<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Hibiscus<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Chamomile<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Herbs &amp; botanicals<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Traceable<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Year round<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Coloured capsicum<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Cucumber<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Ginger<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Hibiscus<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Chamomile<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Herbs &amp; botanicals<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Traceable<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg></span
+        ><span class="mx-8 inline-flex items-center gap-8"
+          >Year round<svg
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
+            /></svg
+        ></span>
+      </div>
+    </div>
 
-      <div
-        data-hero-content
-        class="relative z-10 mx-auto flex min-h-[660px] max-w-[960px] items-center px-5 sm:min-h-[760px] sm:px-8 lg:min-h-[860px] xl:max-w-[1170px] xl:px-2.5"
+    <!-- Farm Gallery -->
+    <section id="gallery" class="bg-[#005840] py-20 px-4 md:px-12">
+      <h2
+        class="reveal text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-[-1px] text-[#A9E000] mb-12"
       >
-        <div class="w-full max-w-[690px] py-28 text-white">
-          <div class="mb-6 flex items-center gap-3 text-eyebrow uppercase text-cream/90">
-            <span class="h-px w-10 bg-gold" aria-hidden="true"></span>
-            We produce with purpose
+        Farm Gallery
+      </h2>
+      <div
+        class="flex overflow-x-auto snap-x snap-mandatory -mx-3 pb-4 [scrollbar-width:thin]"
+      >
+        <figure
+          class="reveal-zoom group snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1080&q=80"
+              alt="Bed preparation"
+              loading="lazy"
+              class="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
           </div>
-          <h1 class="font-heading text-display font-semibold text-white">
-            From the Ground Up
-          </h1>
-          <p class="mt-6 max-w-[52ch] text-lead text-cream/90 sm:mt-8">
-            Premium crops grown and traded for African markets with quality,
-            consistency and traceability at every step.
+          <figcaption
+            class="bg-[#F8F1E0] p-6 transition-colors duration-300 group-hover:bg-[#A9E000]"
+          >
+            <h3 class="text-2xl font-bold">Bed preparation</h3>
+            <p class="mt-1 font-medium">Site: Naivasha</p>
+          </figcaption>
+        </figure>
+        <figure
+          class="reveal-zoom group snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1080&q=80"
+              alt="Cucumber establishment"
+              loading="lazy"
+              class="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          </div>
+          <figcaption
+            class="bg-[#F8F1E0] p-6 transition-colors duration-300 group-hover:bg-[#A9E000]"
+          >
+            <h3 class="text-2xl font-bold">Establishment</h3>
+            <p class="mt-1 font-medium">Crop: Cucumber</p>
+          </figcaption>
+        </figure>
+        <figure
+          class="reveal-zoom group snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=1080&q=80"
+              alt="Capsicum in vegetative stage"
+              loading="lazy"
+              class="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          </div>
+          <figcaption
+            class="bg-[#F8F1E0] p-6 transition-colors duration-300 group-hover:bg-[#A9E000]"
+          >
+            <h3 class="text-2xl font-bold">Vegetative</h3>
+            <p class="mt-1 font-medium">Crop: Capsicum</p>
+          </figcaption>
+        </figure>
+        <figure
+          class="reveal-zoom group snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=1080&q=80"
+              alt="Cucumber at full canopy"
+              loading="lazy"
+              class="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          </div>
+          <figcaption
+            class="bg-[#F8F1E0] p-6 transition-colors duration-300 group-hover:bg-[#A9E000]"
+          >
+            <h3 class="text-2xl font-bold">Full canopy</h3>
+            <p class="mt-1 font-medium">Crop: Cucumber</p>
+          </figcaption>
+        </figure>
+        <figure
+          class="reveal-zoom group snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1080&q=80"
+              alt="Agronomy team scouting crops"
+              loading="lazy"
+              class="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          </div>
+          <figcaption
+            class="bg-[#F8F1E0] p-6 transition-colors duration-300 group-hover:bg-[#A9E000]"
+          >
+            <h3 class="text-2xl font-bold">Crop scouting</h3>
+            <p class="mt-1 font-medium">Team: Agronomy</p>
+          </figcaption>
+        </figure>
+        <figure
+          class="reveal-zoom group snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1080&q=80"
+              alt="Water storage infrastructure"
+              loading="lazy"
+              class="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          </div>
+          <figcaption
+            class="bg-[#F8F1E0] p-6 transition-colors duration-300 group-hover:bg-[#A9E000]"
+          >
+            <h3 class="text-2xl font-bold">Water storage</h3>
+            <p class="mt-1 font-medium">Team: Infrastructure</p>
+          </figcaption>
+        </figure>
+      </div>
+      <p
+        class="mt-4 text-right text-sm uppercase tracking-widest text-[#A9E000]/80"
+      >
+        Scroll or swipe through the farm &rarr;
+      </p>
+    </section>
+
+    <!-- Help & Contact -->
+    <section id="contact" class="bg-white py-24 px-6 md:px-20">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <p
+            class="reveal-fade text-sm md:text-base tracking-[0.3em] uppercase mb-4"
+          >
+            Help &amp; Contact
           </p>
-          <div class="mt-9 flex flex-wrap items-center gap-5 sm:mt-11">
-            <a
-              href="#produce"
-              class="brand-button inline-flex items-center gap-4 border-2 border-gold bg-gold px-7 py-3.5 text-[14px] font-semibold tracking-[0.06em] text-teal-dark transition-colors duration-300 hover:border-cream hover:bg-cream sm:px-9"
-            >
-              Explore our crops <span aria-hidden="true">→</span>
-            </a>
-            <a
-              href="#tour"
-              class="inline-flex items-center gap-4 border-b border-cream/70 py-2 text-[14px] font-medium tracking-[0.06em] text-cream transition-colors hover:border-gold hover:text-gold"
-            >
-              Visit our farm <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================= ABOUT ============================= -->
-    <section id="about" class="relative py-20 md:py-[100px] xl:py-[120px]">
-      <div class="relative z-10 mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
-        <div
-          class="flex flex-col-reverse items-center gap-10 md:flex-row md:gap-0"
-        >
-          <div class="w-full md:w-7/12">
-            <div class="md:mr-5 lg:mr-0">
-              <h3 class="mb-4 font-heading text-h3 font-bold text-olive">
-                Who we are
-              </h3>
-              <p class="mb-4 max-w-[62ch] text-lead">
-                Chasing Sun is an agrienterprise working at the intersection of
-                agriculture, technology and market intelligence. Our farm sits
-                between Mount Longonot and Lake Naivasha, where
-                controlled-environment greenhouses let us grow to specification,
-                year round, for professional buyers.
-              </p>
-              <h3 class="mb-4 font-heading text-h3 font-bold text-olive">
-                Vision &amp; Mission
-              </h3>
-              <p class="mb-4 max-w-[62ch]">
-                <strong class="text-olive">Vision:</strong> A dependable
-                agricultural future defined by quality and integrity.
-              </p>
-              <p class="max-w-[62ch]">
-                <strong class="text-olive">Mission:</strong> To eradicate food
-                insecurity in Africa and beyond.
-              </p>
-              <a
-                href="#pillars"
-                class="mt-5 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-9 xl:mt-[50px] xl:px-11 xl:py-[18px]"
-              >
-                What We Do <span class="pl-2.5">+</span>
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-5/12">
-            <img
-              src="images/greenhouse/ai-greenhouse-sunrise.webp"
-              alt="AI-generated view of greenhouse tunnels and irrigation infrastructure in warm sunrise light"
-              loading="lazy"
-              class="brand-photo w-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ PILLARS ============================ -->
-    <section
-      id="pillars"
-      class="bg-[url('images/greenhouse/IMG_8550.jpg')] bg-cover bg-center bg-no-repeat"
-    >
-      <div class="bg-sun-wash/95 py-20 md:py-[100px] xl:py-[120px]">
-        <div class="relative mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
-          <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-16">
-            <div class="mb-4 flex items-center justify-center">
-              <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
-              <div class="text-eyebrow uppercase text-teal">What We Do</div>
-              <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
-            </div>
-            <h2 class="font-heading text-h2 font-bold text-olive">
-              We grow and trade premium-quality crops for African markets, with
-              a focus on quality, consistency and traceability.
-            </h2>
-          </div>
-
-          <div
-            class="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3 xl:gap-[50px]"
-          >
-            <article id="horticulture" class="group scroll-mt-28">
-              <a href="#horticulture-detail" class="block overflow-hidden">
-                <img
-                  src="images/greenhouse/IMG_7525.jpg"
-                  alt="Trellised capsicum growing under greenhouse cover"
-                  loading="lazy"
-                  class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </a>
-              <div class="mt-[30px] text-center">
-                <span
-                  class="orbit-index nums text-[13px] font-semibold tracking-[0.08em] text-olive"
-                  >01</span
-                >
-                <a
-                  href="#horticulture-detail"
-                  class="mt-1.5 inline-block font-heading text-h4 font-semibold text-olive transition-colors hover:text-teal"
-                  >Horticulture</a
-                >
-                <p class="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.6]">
-                  Greenhouse production focused on efficient growing cycles and
-                  market-led crop planning.
-                </p>
-              </div>
-            </article>
-
-            <article id="commodity-trading" class="group scroll-mt-28">
-              <a href="#produce" class="block overflow-hidden">
-                <img
-                  src="images/greenhouse/ai-dried-ginger.webp"
-                  alt="AI-generated dried ginger prepared for quality-controlled commodity trade"
-                  loading="lazy"
-                  class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </a>
-              <div class="mt-[30px] text-center">
-                <span
-                  class="orbit-index nums text-[13px] font-semibold tracking-[0.08em] text-olive"
-                  >02</span
-                >
-                <a
-                  href="#produce"
-                  class="mt-1.5 inline-block font-heading text-h4 font-semibold text-olive transition-colors hover:text-teal"
-                  >Commodity Trade</a
-                >
-                <p class="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.6]">
-                  High-value dried botanicals and spices — ginger, hibiscus and
-                  chamomile — sourced to spec.
-                </p>
-              </div>
-            </article>
-
-            <article id="farm-dashboard" class="group scroll-mt-28">
-              <a href="#gallery" class="block overflow-hidden">
-                <img
-                  src="images/greenhouse/ai-bed-preparation.webp"
-                  alt="AI-generated precision greenhouse beds with drip irrigation and young transplants"
-                  loading="lazy"
-                  class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </a>
-              <div class="mt-[30px] text-center">
-                <span
-                  class="orbit-index nums text-[13px] font-semibold tracking-[0.08em] text-olive"
-                  >03</span
-                >
-                <a
-                  href="#gallery"
-                  class="mt-1.5 inline-block font-heading text-h4 font-semibold text-olive transition-colors hover:text-teal"
-                  >Farm Dashboard</a
-                >
-                <p class="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.6]">
-                  Our dashboard brings irrigation monitoring, production
-                  tracking and farm records into one place.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="text-center">
-            <a
-              href="#contact"
-              class="mt-10 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-9 md:mt-[60px] xl:px-11 xl:py-[18px]"
-            >
-              Request a Quote<span class="pl-2.5">+</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================== CTA ============================== -->
-    <section
-      class="bg-[url('images/greenhouse/IMG_8533.jpg')] bg-cover bg-center bg-no-repeat"
-    >
-      <div class="bg-sun-deep/95 py-[60px] sm:py-20">
-        <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
-          <div
-            class="flex flex-col items-center gap-[30px] lg:flex-row lg:gap-0"
-          >
-            <div class="w-full text-center lg:w-7/12">
-              <div class="mb-4 flex items-center justify-center">
-                <span
-                  class="mr-2.5 h-px w-10 bg-white/70"
-                  aria-hidden="true"
-                ></span>
-                <div class="text-eyebrow uppercase text-cream">
-                  Bulk &amp; Export Orders
-                </div>
-                <span
-                  class="ml-2.5 h-px w-10 bg-white/70"
-                  aria-hidden="true"
-                ></span>
-              </div>
-              <h2 class="font-heading text-h2 font-bold text-white">
-                Quality you can count on. Supply you can rely on.
-              </h2>
-              <p class="mt-4 text-[17px] leading-[1.7] text-white/90">
-                Tell us the quantity and grade you need — we’ll handle the rest.
-              </p>
-            </div>
-            <div class="w-full text-center lg:w-5/12 lg:text-right">
-              <a
-                href="#contact"
-                class="inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-olive sm:px-9 xl:px-11 xl:py-[18px]"
-              >
-                Contact Us<span class="pl-2.5">+</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================== WHAT WE GROW =========================== -->
-    <section
-      id="produce"
-      class="scroll-mt-24 py-20 md:py-[100px] xl:py-[120px]"
-    >
-      <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
-        <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-16">
-          <div class="mb-4 flex items-center justify-center">
-            <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
-            <div class="text-eyebrow uppercase text-teal">
-              From Our Greenhouses
-            </div>
-            <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
-          </div>
           <h2
-            id="horticulture-detail"
-            class="scroll-mt-28 font-heading text-h2 font-bold text-olive"
+            class="reveal text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-[-1px]"
           >
-            Precision growing, built for market demand.
-          </h2>
-        </div>
-
-        <div
-          class="grid grid-cols-1 gap-[30px] sm:grid-cols-2 md:grid-cols-3 lg:gap-[50px]"
-        >
-          <article class="group">
-            <div
-              class="relative flex items-center justify-center overflow-hidden"
-            >
-              <img
-                src="images/greenhouse/ai-yellow-peppers.webp"
-                alt="AI-generated yellow bell peppers ripening on healthy greenhouse plants"
-                loading="lazy"
-                class="aspect-[3/4] w-full object-cover"
-              />
-            </div>
-            <div class="py-10 text-center">
-              <div
-                class="mb-2 text-[13px] uppercase tracking-[0.12em] text-muted"
-              >
-                Coloured capsicum
-              </div>
-              <div class="font-heading text-h4 font-semibold text-olive">
-                Grown to grade
-              </div>
-              <p class="mx-auto mt-3 max-w-[32ch] text-[15px] leading-[1.6]">
-                Trellised, drip-fed and picked by colour and size against the
-                buyer's grade sheet.
-              </p>
-            </div>
-          </article>
-
-          <article class="group">
-            <div
-              class="relative flex items-center justify-center overflow-hidden"
-            >
-              <img
-                src="images/greenhouse/ai-cucumber.webp"
-                alt="AI-generated market-ready cucumber growing on the greenhouse vine"
-                loading="lazy"
-                class="aspect-[3/4] w-full object-cover"
-              />
-            </div>
-            <div class="py-10 text-center">
-              <div
-                class="mb-2 text-[13px] uppercase tracking-[0.12em] text-muted"
-              >
-                Cucumber
-              </div>
-              <div class="font-heading text-h4 font-semibold text-olive">
-                Year-round supply
-              </div>
-              <p class="mx-auto mt-3 max-w-[32ch] text-[15px] leading-[1.6]">
-                Staggered planting under cover keeps volumes steady outside the
-                open-field season.
-              </p>
-            </div>
-          </article>
-
-          <article class="group sm:col-span-2 md:col-span-1">
-            <div
-              class="relative flex items-center justify-center overflow-hidden"
-            >
-              <img
-                src="images/greenhouse/dried-hibiscus-flowers.jpg"
-                alt="Dried hibiscus flowers ready for use as a botanical ingredient"
-                loading="lazy"
-                class="aspect-[3/4] w-full object-cover"
-              />
-            </div>
-            <div class="py-10 text-center">
-              <div
-                class="mb-2 text-[13px] uppercase tracking-[0.12em] text-muted"
-              >
-                Herbs &amp; botanicals
-              </div>
-              <div class="font-heading text-h4 font-semibold text-olive">
-                Grown for drying
-              </div>
-              <p class="mx-auto mt-3 max-w-[32ch] text-[15px] leading-[1.6]">
-                Aromatics destined for tea manufacturers, spice blenders and
-                value-addition companies.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ FARM TOUR ============================ -->
-    <section
-      id="tour"
-      class="relative scroll-mt-24 bg-[url('images/greenhouse/ai-bed-preparation.webp')] bg-cover bg-center"
-    >
-      <div class="py-[60px] sm:py-20">
-        <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
-          <div
-            class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-0"
-          >
-            <div class="bg-sun-deep/95 p-[30px] sm:p-10 xl:p-[50px] 2xl:p-[60px]">
-              <div class="mb-4 flex items-center">
-                <span
-                  class="mr-2.5 h-px w-10 bg-white/70"
-                  aria-hidden="true"
-                ></span>
-                <div class="text-eyebrow uppercase text-cream">
-                  Book a farm tour
-                </div>
-              </div>
-              <h2 class="font-heading text-h2 font-bold text-white">
-                Come see how we grow
-              </h2>
-              <p class="mt-5 max-w-[46ch] text-lead text-white/90">
-                Farm visits run on Mondays and Fridays by advance booking. Email
-                or call ahead and we will arrange a walk-through of the tunnels,
-                the irrigation setup and the packing process.
-              </p>
-              <a
-                href="mailto:admin@chasingsun.africa?subject=Farm%20tour%20booking"
-                class="mt-5 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-olive sm:px-9 xl:mt-[50px] xl:px-11 xl:py-[18px]"
-              >
-                Book a Tour<span class="pl-2.5">+</span>
-              </a>
-            </div>
-
-            <div class="flex items-center justify-center lg:justify-end">
-              <div
-                class="relative z-10 flex h-[180px] w-[180px] flex-col items-center justify-center rounded-full bg-cream text-center"
-              >
-                <span
-                  class="absolute inset-0 -z-10 animate-ripple rounded-full bg-cream motion-reduce:hidden"
-                  aria-hidden="true"
-                ></span>
-                <span
-                  class="absolute inset-0 -z-10 animate-ripple2 rounded-full bg-cream motion-reduce:hidden"
-                  aria-hidden="true"
-                ></span>
-                <svg
-                  class="mb-2 h-7 w-7 text-teal-mid"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="4" width="18" height="18" rx="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-                <div class="font-heading text-h4 font-bold text-olive">
-                  Mon &amp; Fri
-                </div>
-                <div
-                  class="px-6 text-[13px] uppercase tracking-[0.1em] text-teal-mid"
-                >
-                  By advance booking
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ GALLERY ============================ -->
-    <section id="gallery" class="scroll-mt-24 mb-[100px] xl:mb-[170px]">
-      <div class="mx-auto max-w-full px-4 md:px-[75px]">
-        <div
-          class="no-scrollbar flex snap-x snap-mandatory gap-[35px] overflow-x-auto scroll-smooth pb-2"
-        >
-          <article
-            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
-          >
-            <img
-              src="images/greenhouse/ai-bed-preparation.webp"
-              alt="AI-generated greenhouse beds with drip lines and young transplants"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
-            >
-              <ul class="space-y-[30px]">
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Stage:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Bed preparation
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Site:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Naivasha
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article
-            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
-          >
-            <img
-              src="images/greenhouse/IMG_3154.jpg"
-              alt="Young cucumber plants establishing along the drip lines"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
-            >
-              <ul class="space-y-[30px]">
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Stage:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Establishment
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Crop:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Cucumber
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article
-            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
-          >
-            <img
-              src="images/greenhouse/IMG_8652.JPG"
-              alt="Even rows of young capsicum seedlings running the length of a tunnel"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
-            >
-              <ul class="space-y-[30px]">
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Stage:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Vegetative
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Crop:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Capsicum
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article
-            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
-          >
-            <img
-              src="images/greenhouse/IMG_8782.jpg"
-              alt="A full cucumber canopy trained up the greenhouse trellis"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
-            >
-              <ul class="space-y-[30px]">
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Stage:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Full canopy
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Crop:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Cucumber
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article
-            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
-          >
-            <img
-              src="images/greenhouse/ai-crop-scouting.webp"
-              alt="AI-generated crop scouting setup with a notebook and loupe beside young greenhouse cucumbers"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
-            >
-              <ul class="space-y-[30px]">
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Stage:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Crop scouting
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Team:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Agronomy
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article
-            class="relative h-[530px] w-full shrink-0 snap-start md:w-[calc(50%-17.5px)] xl:w-[calc(33.333%-24px)]"
-          >
-            <img
-              src="images/greenhouse/ai-water-infrastructure.webp"
-              alt="AI-generated farm water tank and irrigation installation in late-afternoon light"
-              loading="lazy"
-              class="h-full w-full object-cover"
-            />
-            <div
-              class="absolute bottom-0 left-0 bg-sun-deep px-[50px] pb-[60px] pt-[55px]"
-            >
-              <ul class="space-y-[30px]">
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Stage:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Water storage
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="text-[12px] uppercase tracking-[0.14em] text-cream/80"
-                  >
-                    Team:
-                  </div>
-                  <div class="font-heading text-h5 font-medium text-white">
-                    Infrastructure
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
-        <p
-          class="mt-6 text-center text-[13px] uppercase tracking-[0.12em] text-muted/80"
-        >
-          Scroll or swipe through the farm &rarr;
-        </p>
-      </div>
-    </section>
-
-    <!-- ========================= HELP & CONTACT ========================= -->
-    <section
-      id="contact"
-      class="scroll-mt-24 py-20 md:py-[100px] xl:py-[120px]"
-    >
-      <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
-        <div class="mx-auto mb-12 max-w-[46rem] text-center md:mb-14">
-          <div class="mb-4 flex items-center justify-center">
-            <span class="mr-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
-            <div class="text-eyebrow uppercase text-teal">
-              Help &amp; Contact
-            </div>
-            <span class="ml-3 h-px w-7 bg-teal/40" aria-hidden="true"></span>
-          </div>
-          <h2 class="font-heading text-h2 font-bold text-olive">
             Talk to us about an order, a tour, or a partnership.
           </h2>
         </div>
-
         <form
           action="mailto:admin@chasingsun.africa"
           method="post"
           enctype="text/plain"
-          class="mt-[30px] bg-cream p-5 sm:p-[30px] xl:p-10"
+          class="reveal bg-[#FAF6EB] p-8 md:p-10 space-y-5"
         >
-          <h3 class="mb-6 font-heading text-h4 font-bold text-olive">
-            Send us a message
-          </h3>
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-            <label class="block">
-              <span
-                class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
-                >Name</span
-              >
-              <input
-                type="text"
-                name="name"
-                required
-                class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
-              />
-            </label>
-            <label class="block">
-              <span
-                class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
-                >Email</span
-              >
-              <input
-                type="email"
-                name="email"
-                required
-                class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
-              />
-            </label>
-            <label class="block">
-              <span
-                class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
-                >Phone</span
-              >
-              <input
-                type="tel"
-                name="phone"
-                class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
-              />
-            </label>
-          </div>
-          <label class="mt-5 block">
-            <span
-              class="mb-2 block text-[13px] font-medium uppercase tracking-[0.1em] text-teal-mid"
-              >Message</span
-            >
+          <h3 class="text-2xl font-bold">Send us a message</h3>
+          <label class="block">
+            <span class="text-sm font-medium">Name</span>
+            <input
+              type="text"
+              name="name"
+              required
+              class="mt-1 w-full border border-[#005840]/40 bg-white px-4 py-3 focus:outline-none focus:border-[#005840] focus:ring-4 focus:ring-[#A9E000]/40 transition"
+            />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">Email</span>
+            <input
+              type="email"
+              name="email"
+              required
+              class="mt-1 w-full border border-[#005840]/40 bg-white px-4 py-3 focus:outline-none focus:border-[#005840] focus:ring-4 focus:ring-[#A9E000]/40 transition"
+            />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">Phone</span>
+            <input
+              type="tel"
+              name="phone"
+              class="mt-1 w-full border border-[#005840]/40 bg-white px-4 py-3 focus:outline-none focus:border-[#005840] focus:ring-4 focus:ring-[#A9E000]/40 transition"
+            />
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">Message</span>
             <textarea
               name="message"
               rows="5"
               required
-              class="w-full border border-muted/30 bg-white px-4 py-3 text-[16px] text-teal-mid outline-none transition-colors focus:border-olive"
+              class="mt-1 w-full border border-[#005840]/40 bg-white px-4 py-3 focus:outline-none focus:border-[#005840] focus:ring-4 focus:ring-[#A9E000]/40 transition"
             ></textarea>
           </label>
           <button
             type="submit"
-            class="mt-6 inline-block border-2 border-gold bg-gold px-7 py-[15px] text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-teal-mid hover:bg-white hover:text-olive sm:px-9 xl:px-11 xl:py-[18px]"
+            class="shine px-6 py-3 rounded-full bg-[#005840] text-[#A9E000] font-semibold hover:bg-[#004530] transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
-            Send Message<span class="pl-2.5">+</span>
+            Send Message
           </button>
         </form>
       </div>
     </section>
 
-    <!-- ============================= FOOTER ============================= -->
-    <footer>
-      <div
-        class="bg-sun-deep bg-cover bg-center bg-blend-multiply xl:bg-[url('images/greenhouse/ai-bed-preparation.webp')]"
-      >
-        <div class="py-20 md:py-[100px] xl:py-[120px]">
-          <div class="mx-auto max-w-[960px] px-2.5 xl:max-w-[1170px]">
-            <div class="flex flex-wrap">
-              <div class="w-full pb-[30px] md:w-1/2 lg:w-5/12 lg:pb-0">
-                <div class="pr-0 md:pr-[50px] lg:pr-[70px]">
-                  <a
-                    href="#top"
-                    class="inline-flex items-center gap-2.5"
-                    aria-label="Chasing Sun Africa — home"
-                  >
-                    <img
-                      src="images/greenhouse/CHASING-SUN.webp"
-                      alt="Chasing Sun Africa"
-                      class="h-24 w-auto object-contain"
-                    />
-                  </a>
-                  <p
-                    class="mt-6 max-w-[42ch] text-[15px] leading-[1.7] text-white/90"
-                  >
-                    Premium crops grown and traded for African markets —
-                    quality checked and traceable from source to supply.
-                  </p>
-                  <p class="mt-4 text-[15px] leading-[1.7] text-white/90">
-                    33 Muthithi Road, Nairobi, Kenya<br />
-                    <a
-                      href="mailto:admin@chasingsun.africa"
-                      class="transition-colors hover:text-teal-light"
-                      >admin@chasingsun.africa</a
-                    >
-                  </p>
-                  <div class="mt-2.5 flex items-center gap-2.5 px-[5px] py-5">
-                    <svg
-                      class="h-9 w-9 shrink-0 text-white"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
-                      />
-                    </svg>
-                    <div>
-                      <div
-                        class="text-[13px] uppercase tracking-[0.12em] text-white/70"
-                      >
-                        Call us:
-                      </div>
-                      <a
-                        href="tel:+254711549108"
-                        class="nums text-[17px] text-white transition-colors hover:text-teal-light"
-                        ><strong>+254 711 549108</strong></a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-full pb-[30px] md:w-1/2 lg:w-3/12 lg:pb-0">
-                <h4 class="mb-7 font-heading text-h4 font-bold text-white">
-                  What we do
-                </h4>
-                <ul>
-                  <li class="flex leading-[2.6]">
-                    <svg
-                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="13 17 18 12 13 7" />
-                      <polyline points="6 17 11 12 6 7" />
-                    </svg>
-                    <a
-                      href="#horticulture"
-                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
-                      >Horticulture</a
-                    >
-                  </li>
-                  <li class="flex leading-[2.6]">
-                    <svg
-                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="13 17 18 12 13 7" />
-                      <polyline points="6 17 11 12 6 7" />
-                    </svg>
-                    <a
-                      href="#commodity-trading"
-                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
-                      >Commodity Trade</a
-                    >
-                  </li>
-                  <li class="flex leading-[2.6]">
-                    <svg
-                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="13 17 18 12 13 7" />
-                      <polyline points="6 17 11 12 6 7" />
-                    </svg>
-                    <a
-                      href="#farm-dashboard"
-                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
-                      >Farm Dashboard</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="w-full pb-[30px] md:w-1/2 lg:w-2/12 lg:pb-0">
-                <h4 class="mb-7 font-heading text-h4 font-bold text-white">
-                  The Farm
-                </h4>
-                <ul>
-                  <li class="flex leading-[2.6]">
-                    <svg
-                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="13 17 18 12 13 7" />
-                      <polyline points="6 17 11 12 6 7" />
-                    </svg>
-                    <a
-                      href="#produce"
-                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
-                      >What We Grow</a
-                    >
-                  </li>
-                  <li class="flex leading-[2.6]">
-                    <svg
-                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="13 17 18 12 13 7" />
-                      <polyline points="6 17 11 12 6 7" />
-                    </svg>
-                    <a
-                      href="#gallery"
-                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
-                      >Farm Gallery</a
-                    >
-                  </li>
-                  <li class="flex leading-[2.6]">
-                    <svg
-                      class="mt-[14px] h-3 w-3 shrink-0 text-teal-light"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="13 17 18 12 13 7" />
-                      <polyline points="6 17 11 12 6 7" />
-                    </svg>
-                    <a
-                      href="#tour"
-                      class="pl-[15px] text-[15px] text-white/90 transition-all hover:translate-x-[5px] hover:text-teal-light"
-                      >Book a Tour</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="w-full md:w-1/2 lg:w-2/12">
-                <h4 class="mb-7 font-heading text-h4 font-bold text-white">
-                  Newsletter
-                </h4>
-                <p class="mb-4 text-[15px] leading-[1.6] text-white/90">
-                  Harvest updates and availability, straight to your inbox.
-                </p>
-                <form
-                  action="mailto:admin@chasingsun.africa"
-                  method="post"
-                  enctype="text/plain"
-                  class="flex flex-col gap-2.5"
+    <!-- Footer -->
+    <footer class="bg-black text-white px-6 md:px-20 pt-16">
+      <div class="reveal grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <span class="inline-flex items-center gap-3 h-12">
+            <svg class="h-full w-auto" viewBox="0 0 48 48" aria-hidden="true">
+              <rect width="48" height="48" rx="12" fill="#A9E000" />
+              <circle cx="24" cy="28" r="9" fill="#005840" />
+              <path
+                d="M8 36h32M24 8v5M11 15l3 3M37 15l-3 3"
+                stroke="#005840"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="font-bold text-[#A9E000] text-2xl">Chasing Sun</span>
+          </span>
+          <p class="mt-6 text-white/80">
+            Premium crops grown and traded for African markets — quality checked
+            and traceable from source to supply.
+          </p>
+        </div>
+        <div class="space-y-3 text-white/80">
+          <p class="flex items-start gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 mt-0.5 shrink-0 text-[#A9E000]"
+              aria-hidden="true"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            33 Muthithi Road, Nairobi, Kenya
+          </p>
+          <a
+            href="mailto:admin@chasingsun.africa"
+            class="flex items-center gap-3 hover:text-[#A9E000]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 shrink-0 text-[#A9E000]"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            admin@chasingsun.africa
+          </a>
+          <a
+            href="tel:+254711549108"
+            class="flex items-center gap-3 hover:text-[#A9E000]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 shrink-0 text-[#A9E000]"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+            +254 711 549108
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <h4
+              class="text-[#A9E000] font-semibold uppercase tracking-wider text-sm mb-4"
+            >
+              What we do
+            </h4>
+            <ul class="space-y-2 text-white/80">
+              <li>
+                <a
+                  href="#horticulture"
+                  class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
+                  >Horticulture</a
                 >
-                  <label class="sr-only" for="newsletter-email"
-                    >Email address</label
-                  >
-                  <input
-                    id="newsletter-email"
-                    type="email"
-                    name="subscriber_email"
-                    required
-                    placeholder="you@company.com"
-                    class="w-full border border-white/40 bg-white/10 px-4 py-3 text-[15px] text-white outline-none transition-colors placeholder:text-white/60 focus:border-gold"
-                  />
-                  <button
-                    type="submit"
-                    class="border-2 border-gold bg-gold px-5 py-3 text-[15px] font-medium tracking-[0.06em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-olive"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
+              </li>
+              <li>
+                <a
+                  href="#commodity-trading"
+                  class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
+                  >Commodity Trade</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#farm-dashboard"
+                  class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
+                  >Farm Dashboard</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-[#A9E000] font-semibold uppercase tracking-wider text-sm mb-4"
+            >
+              The Farm
+            </h4>
+            <ul class="space-y-2 text-white/80">
+              <li>
+                <a
+                  href="#produce"
+                  class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
+                  >What We Grow</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#gallery"
+                  class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
+                  >Farm Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tour"
+                  class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
+                  >Book a Tour</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
+        <div>
+          <h4
+            class="text-[#A9E000] font-semibold uppercase tracking-wider text-sm mb-4"
+          >
+            Newsletter
+          </h4>
+          <p class="text-white/80 mb-4">
+            Harvest updates and availability, straight to your inbox.
+          </p>
+          <form
+            class="flex"
+            action="mailto:admin@chasingsun.africa?subject=Newsletter%20signup"
+            method="post"
+            enctype="text/plain"
+          >
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input
+              id="newsletter-email"
+              type="email"
+              name="email"
+              required
+              placeholder="Email address"
+              class="min-w-0 flex-1 px-4 py-3 text-[#005840] focus:outline-none"
+            />
+            <button
+              type="submit"
+              class="shine px-4 py-3 bg-[#A9E000] text-[#005840] font-semibold hover:bg-white transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
-
-      <div class="bg-sun-deep py-5 text-center">
-        <p class="text-[14px] text-white/90">
-          © 2026 Chasing Sun Africa.
-          <a
-            href="/terms"
-            class="text-teal-light underline-offset-4 transition-colors hover:text-white hover:underline"
-            >Terms &amp; Conditions</a
+      <div
+        class="mt-16 py-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70"
+      >
+        <p>© 2026 Chasing Sun Africa.</p>
+        <div class="flex gap-8">
+          <a href="#" class="hover:text-white">Terms &amp; Conditions</a>
+          <a href="#" class="hover:text-white">Privacy &amp; Cookie Policy</a>
+        </div>
+        <a
+          href="#top"
+          class="inline-flex items-center gap-2 hover:text-[#A9E000]"
+        >
+          Back to the top
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
           >
-          &middot;
-          <a
-            href="/privacy"
-            class="text-teal-light underline-offset-4 transition-colors hover:text-white hover:underline"
-            >Privacy &amp; Cookie Policy</a
-          >
-        </p>
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
       </div>
     </footer>
-
-    <script>
-      (() => {
-        const reduceMotion = window.matchMedia(
-          "(prefers-reduced-motion: reduce)",
-        ).matches;
-
-        const header = document.querySelector("header");
-        const hero = document.querySelector("body > section");
-
-        if (!reduceMotion) {
-          header?.classList.add("hero-load");
-          header?.style.setProperty("--hero-delay", "80ms");
-
-          const heroImages = hero?.querySelectorAll(":scope > img");
-          heroImages?.forEach((image, index) => {
-            if (index === 0) image.classList.add("hero-image-load");
-          });
-
-          const heroContent = hero?.querySelector("[data-hero-content]");
-          heroContent?.classList.add("hero-load");
-          heroContent?.style.setProperty("--hero-delay", "320ms");
-        }
-
-        const revealItems = [];
-        const sections = [...document.querySelectorAll("body > section")].slice(
-          1,
-        );
-
-        sections.forEach((section, sectionIndex) => {
-          const sectionContent = section.querySelector(":scope > div");
-          if (sectionContent) {
-            sectionContent.classList.add("motion-item");
-            sectionContent.dataset.motion =
-              sectionIndex % 3 === 0
-                ? "left"
-                : sectionIndex % 3 === 1
-                  ? "right"
-                  : "scale";
-            revealItems.push(sectionContent);
-          }
-
-          section.querySelectorAll("article").forEach((card, cardIndex) => {
-            card.classList.add("motion-item");
-            card.dataset.motion = "scale";
-            card.style.setProperty(
-              "--motion-delay",
-              `${Math.min(cardIndex % 4, 3) * 110}ms`,
-            );
-            revealItems.push(card);
-          });
-        });
-
-        const footerContent = document.querySelector("footer > div");
-        if (footerContent) {
-          footerContent.classList.add("motion-item");
-          revealItems.push(footerContent);
-        }
-
-        if (reduceMotion || !("IntersectionObserver" in window)) {
-          revealItems.forEach((item) => item.classList.add("is-visible"));
-          return;
-        }
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            });
-          },
-          {
-            threshold: 0.12,
-            rootMargin: "0px 0px -8% 0px",
-          },
-        );
-
-        requestAnimationFrame(() => {
-          revealItems.forEach((item) => observer.observe(item));
-        });
-      })();
-    </script>
   </body>
 </html>
