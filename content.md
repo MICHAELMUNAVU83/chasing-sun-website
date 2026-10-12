@@ -13,15 +13,11 @@ Source of truth for the copy on `index.html`, listed in page order.
 
 - Home (`#top`)
 - Horticulture (`#horticulture`)
-- Commodity Trade (`#commodity-trading`)
-- Farm Dashboard (`#farm-dashboard`)
-- The Farm (dropdown)
-  - Who We Are (`#about`)
-  - What We Grow (`#produce`)
-  - Farm Gallery (`#gallery`)
-  - Book a Tour (`#tour`)
-- Help & Contact (`#contact`)
-- Call us: +254 711 549108
+- Technology (`#farm-dashboard`)
+- Acres Under Management (AUM) (`#about`)
+- Customer (`#contact`)
+- Commodities (`#commodity-trading`)
+- AUM Login (`https://dashboard.chasingsun.africa`)
 
 ## Hero
 
