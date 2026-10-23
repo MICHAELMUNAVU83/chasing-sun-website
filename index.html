@@ -18,11 +18,11 @@
     />
     <meta
       property="og:image"
-      content="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80"
+      content="images/greenhouse/ai-vineyard-golden-hour.webp"
     />
     <meta
       name="twitter:image"
-      content="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80"
+      content="images/greenhouse/ai-vineyard-golden-hour.webp"
     />
     <link
       rel="icon"
@@ -145,11 +145,6 @@
         }
       }
 
-      @keyframes marquee {
-        to {
-          transform: translateX(-50%);
-        }
-      }
       @keyframes blob {
         0%,
         100% {
@@ -275,16 +270,6 @@
         }
       }
       @media (prefers-reduced-motion: no-preference) {
-        .marquee {
-          animation: marquee 28s linear infinite;
-        }
-        .marquee-rev {
-          animation: marquee 34s linear infinite reverse;
-        }
-        .marquee-wrap:hover .marquee,
-        .marquee-wrap:hover .marquee-rev {
-          animation-play-state: paused;
-        }
         .blob {
           animation: blob 14s ease-in-out infinite;
         }
@@ -407,6 +392,14 @@
           }
         }
       }
+      [id] { scroll-margin-top: 7rem; }
+      /* Keep entrance transforms inside their section without creating a scroll container. */
+      #pillars { overflow-x: clip; }
+      footer > .grid > * { min-width: 0; }
+      footer a { overflow-wrap: anywhere; }
+      @media (max-width: 1279px) {
+        #nav-toggle:checked ~ nav { max-height: calc(100dvh - 6rem); overflow-y: auto; }
+      }
     </style>
   </head>
   <body class="font-sans antialiased text-[#005840]">
@@ -457,33 +450,33 @@
                 >Home</a
               >
               <a
-                href="#horticulture"
+                href="#produce"
                 class="nav-u py-2 hover:text-white transition-colors"
-                >Horticulture</a
+                >Buy Produce</a
               >
               <a
-                href="#farm-dashboard"
+                href="#our-tech"
                 class="nav-u py-2 hover:text-white transition-colors"
-                >Technology</a
+                >Our Tech</a
               >
               <a
-                href="#about"
+                href="#our-farm"
                 class="nav-u py-2 hover:text-white transition-colors"
-                >Acres Under Management</a
+                >Our Farm</a
               >
               <a
                 href="#contact"
                 class="nav-u py-2 hover:text-white transition-colors"
-                >Customer</a
+                >Work With Us</a
               >
               <a
-                href="#commodity-trading"
+                href="https://commodities.chasingsun.africa"
                 class="nav-u py-2 hover:text-white transition-colors"
-                >Commodities</a
+                >Buy Commodities</a
               >
             </nav>
             <a
-              href="https://dashboard.chasingsun.africa"
+              href="https://dashboard.chasingsun.africa/users/log_in"
               target="_blank"
               rel="noopener noreferrer"
               class="shine hidden xl:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A9E000] text-[#005840] text-sm font-semibold whitespace-nowrap"
@@ -535,30 +528,30 @@
             >Home</a
           >
           <a
-            href="#horticulture"
+            href="#produce"
             class="nav-u py-2 hover:text-white transition-colors"
-            >Horticulture</a
+            >Buy Produce</a
           >
           <a
-            href="#farm-dashboard"
+            href="#our-tech"
             class="nav-u py-2 hover:text-white transition-colors"
-            >Technology</a
+            >Our Tech</a
           >
-          <a href="#about" class="nav-u py-2 hover:text-white transition-colors"
-            >Acres Under Management (AUM)</a
+          <a href="#our-farm" class="nav-u py-2 hover:text-white transition-colors"
+            >Our Farm</a
           >
           <a
             href="#contact"
             class="nav-u py-2 hover:text-white transition-colors"
-            >Customer</a
+            >Work With Us</a
           >
           <a
-            href="#commodity-trading"
+            href="https://commodities.chasingsun.africa"
             class="nav-u py-2 hover:text-white transition-colors"
-            >Commodities</a
+            >Buy Commodities</a
           >
           <a
-            href="https://dashboard.chasingsun.africa"
+            href="https://dashboard.chasingsun.africa/users/log_in"
             target="_blank"
             rel="noopener noreferrer"
             class="mt-2 inline-flex w-fit items-center rounded-full bg-[#A9E000] px-4 py-2 text-[#005840]"
@@ -567,12 +560,13 @@
         </nav>
       </header>
       <img
-        src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1400&q=80"
-        alt="Greenhouse tunnels and fields in warm golden-hour light"
+        src="images/greenhouse/ai-vineyard-golden-hour.webp"
+        alt="AI-generated illustration of vineyard rows in warm golden-hour light"
+        fetchpriority="high"
         class="ken-burns absolute inset-0 w-full h-full object-cover"
       />
       <div
-        class="absolute inset-0 bg-gradient-to-r from-[#005840] via-[#005840]/85 to-[#005840]/40"
+        class="absolute inset-0 bg-gradient-to-r from-[#005840]/90 via-[#005840]/55 to-[#005840]/15"
       ></div>
       <div class="pointer-events-none absolute inset-0 overflow-hidden">
         <div
@@ -682,176 +676,22 @@
       </div>
     </section>
 
-    <div
-      class="marquee-wrap overflow-hidden bg-[#A9E000] text-[#005840] py-5 border-y border-black/10"
-      aria-hidden="true"
-    >
-      <div
-        class="marquee flex w-max whitespace-nowrap text-2xl md:text-4xl font-semibold uppercase tracking-wide"
-      >
-        <span class="mx-8 inline-flex items-center gap-8"
-          >Coloured capsicum<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Cucumber<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Ginger<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Hibiscus<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Chamomile<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Herbs &amp; botanicals<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Traceable<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Year round<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Coloured capsicum<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Cucumber<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Ginger<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Hibiscus<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Chamomile<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Herbs &amp; botanicals<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Traceable<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Year round<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg
-        ></span>
-      </div>
-    </div>
+    <section aria-label="Chasing Sun in numbers" class="bg-[#A9E000] px-6 py-12 md:px-10">
+      <dl class="mx-auto grid max-w-6xl grid-cols-1 gap-8 text-center md:grid-cols-3">
+        <div>
+          <dt class="text-base md:text-lg">Customers Serviced</dt>
+          <dd class="mt-2 text-5xl md:text-6xl font-semibold">100+</dd>
+        </div>
+        <div>
+          <dt class="text-base md:text-lg">Produced Monthly</dt>
+          <dd class="mt-2 text-5xl md:text-6xl font-semibold">20+ <span class="text-2xl">MT</span></dd>
+        </div>
+        <div>
+          <dt class="text-base md:text-lg">Traded Monthly</dt>
+          <dd class="mt-2 text-5xl md:text-6xl font-semibold">50+ <span class="text-2xl">MT</span></dd>
+        </div>
+      </dl>
+    </section>
 
     <!-- Who We Are -->
     <section id="about">
@@ -909,6 +749,118 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Our Farm -->
+    <section id="our-farm" class="bg-[#FAF6EB] py-20 px-6 md:px-10 lg:px-20">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4">Our Farm</p>
+      <h2 class="text-4xl md:text-6xl font-semibold mb-10">Grow with Chasing Sun.</h2>
+      <nav aria-label="Our farm models" class="flex flex-wrap gap-3 mb-10">
+        <a href="#outgrower" class="rounded-full border border-[#005840] px-5 py-2 hover:bg-[#005840] hover:text-white transition-colors">Outgrower</a>
+        <a href="#ingrower" class="rounded-full border border-[#005840] px-5 py-2 hover:bg-[#005840] hover:text-white transition-colors">Ingrower</a>
+        <a href="#aum" class="rounded-full border border-[#005840] px-5 py-2 hover:bg-[#005840] hover:text-white transition-colors">Acres Under Management (AUM)</a>
+      </nav>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <article id="outgrower" class="bg-white p-8 border-t-4 border-[#A9E000]">
+          <span class="text-sm tracking-widest">01</span>
+          <h3 class="text-2xl font-semibold mt-5 mb-4">Outgrower</h3>
+          <p class="text-lg leading-relaxed">We work with landowners to turn their idle land into productive, profitable farms. We bring dedicated management, expert agronomy, ready buyers for the produce, and technology that lets you monitor your farm live.</p>
+        </article>
+        <article id="ingrower" class="bg-white p-8 border-t-4 border-[#A9E000]">
+          <span class="text-sm tracking-widest">02</span>
+          <h3 class="text-2xl font-semibold mt-5 mb-4">Ingrower</h3>
+          <p class="text-lg leading-relaxed">We grow fresh produce in our own greenhouses. Our team manages every crop hands-on for consistent quality, tracked through our own farm technology and grown for contracted buyers.</p>
+        </article>
+        <article id="aum" class="bg-white p-8 border-t-4 border-[#A9E000]">
+          <span class="text-sm tracking-widest">03</span>
+          <h3 class="text-2xl font-semibold mt-5 mb-4">Acres Under Management (AUM)</h3>
+          <p class="text-lg leading-relaxed">Invest in a managed greenhouse or bring your own land into production. Chasing Sun provides the technology, agronomy, farm management and market relationships, so you can participate without running the farm day to day.</p>
+          <a href="#aum-options" class="inline-flex items-center gap-2 mt-6 font-semibold underline underline-offset-4 hover:text-[#005840]/75">Explore AUM options &rarr;</a>
+        </article>
+      </div>
+      <a href="#contact" class="inline-block mt-10 rounded-full bg-[#005840] text-white px-6 py-3 font-semibold hover:bg-[#005840]/90">Work With Us &rarr;</a>
+    </section>
+
+    <!-- Acres Under Management -->
+    <section id="aum-options" aria-labelledby="aum-heading" class="bg-[#005840] text-white py-20 px-6 md:px-10 lg:px-20">
+      <div class="max-w-4xl mb-12">
+        <p class="text-[#A9E000] text-sm tracking-[0.3em] uppercase mb-4">Acres Under Management</p>
+        <h2 id="aum-heading" class="text-[#A9E000] text-4xl md:text-6xl font-semibold leading-tight mb-6">Your land or capital.<br />Our growing expertise.</h2>
+        <p class="text-lg md:text-xl leading-relaxed text-white/85">Chasing Sun brings land, growers and markets together through a professionally managed farming system. Choose a managed greenhouse in Kedong, put your own arable land to work, or invest in the company behind the operation.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <article id="aum-kedong" class="bg-[#FAF6EB] text-[#005840] p-6 md:p-8 flex flex-col">
+          <p class="text-sm tracking-widest uppercase mb-4">01 &middot; Capital investment</p>
+          <h3 class="text-3xl font-semibold mb-4">AUM Investment in Kedong</h3>
+          <p class="text-lg leading-relaxed mb-6">You contribute capital. Chasing Sun provides the land, greenhouse and full operating system in Kedong, managing a cucumber and capsicum rotation on your behalf.</p>
+          <dl class="space-y-5 border-t border-[#005840]/20 pt-6 mb-8">
+            <div><dt class="text-sm mb-1">Investor capital contribution</dt><dd class="text-3xl font-semibold">KES 500,000</dd></div>
+            <div><dt class="text-sm mb-1">Revenue share</dt><dd class="font-semibold text-lg">65% investor / 35% Chasing Sun</dd></div>
+            <div><dt class="text-sm mb-1">Modelled crop rotation</dt><dd class="font-semibold text-lg">15 months</dd></div>
+          </dl>
+          <p class="leading-relaxed mb-6">The investor funds production costs; Chasing Sun does not share those costs. Payouts follow actual harvest revenues, rather than fixed monthly payments.</p>
+          <a href="mailto:admin@chasingsun.africa?subject=AUM%20Kedong%20investment%20enquiry" class="inline-block w-fit mt-auto rounded-full bg-[#005840] px-5 py-3 text-white font-semibold hover:bg-[#005840]/90">Enquire about Kedong &rarr;</a>
+        </article>
+
+        <article id="aum-landowner" class="bg-[#FAF6EB] text-[#005840] p-6 md:p-8 flex flex-col">
+          <p class="text-sm tracking-widest uppercase mb-4">02 &middot; Land partnership</p>
+          <h3 class="text-3xl font-semibold mb-4">AUM Landowner Partnership</h3>
+          <p class="text-lg leading-relaxed mb-6">Turn idle arable land into a professionally managed farm while retaining ownership. Chasing Sun provides technology, agronomy, management and market access.</p>
+          <dl class="space-y-5 border-t border-[#005840]/20 pt-6 mb-8">
+            <div><dt class="text-sm mb-1">You provide</dt><dd class="font-semibold text-lg">Your own arable land</dd></div>
+            <div><dt class="text-sm mb-1">Capital contribution</dt><dd class="text-3xl font-semibold">KES 700,000</dd></div>
+            <div><dt class="text-sm mb-1">Onboarding fee</dt><dd class="font-semibold text-lg">KES 25,000</dd></div>
+            <div><dt class="text-sm mb-1">Revenue share</dt><dd class="font-semibold text-lg">65% investor / 35% Chasing Sun</dd></div>
+          </dl>
+          <p class="leading-relaxed mb-6">We assess soil, water availability and market proximity, then prepare a crop programme and operating plan for your parcel.</p>
+          <a href="mailto:admin@chasingsun.africa?subject=AUM%20land%20assessment%20enquiry" class="inline-block w-fit mt-auto rounded-full bg-[#005840] px-5 py-3 text-white font-semibold hover:bg-[#005840]/90">Request a land assessment &rarr;</a>
+        </article>
+
+        <article id="aum-equity" class="bg-[#FAF6EB] text-[#005840] p-6 md:p-8 flex flex-col">
+          <p class="text-sm tracking-widest uppercase mb-4">03 &middot; Company investment</p>
+          <h3 class="text-3xl font-semibold mb-4">Equity Investment in Chasing Sun</h3>
+          <p class="text-lg leading-relaxed mb-6">Contribute growth capital at company level in exchange for an equity stake in Chasing Sun.</p>
+          <dl class="space-y-5 border-t border-[#005840]/20 pt-6 mb-8">
+            <div><dt class="text-sm mb-1">You provide</dt><dd class="font-semibold text-lg">Growth capital</dd></div>
+            <div><dt class="text-sm mb-1">You receive</dt><dd class="font-semibold text-lg">An equity stake in Chasing Sun</dd></div>
+            <div><dt class="text-sm mb-1">Investment scope</dt><dd class="font-semibold text-lg">The company and its AUM portfolio</dd></div>
+          </dl>
+          <p class="leading-relaxed mb-6">Returns are tied to company performance and valuation, rather than the performance of a single greenhouse.</p>
+          <a href="mailto:admin@chasingsun.africa?subject=Chasing%20Sun%20equity%20investment%20enquiry" class="inline-block w-fit mt-auto rounded-full bg-[#005840] px-5 py-3 text-white font-semibold hover:bg-[#005840]/90">Discuss equity investment &rarr;</a>
+        </article>
+      </div>
+
+      <div class="mt-16">
+        <h3 class="text-3xl md:text-4xl font-semibold text-[#A9E000] mb-8">One operating system, from planting to market.</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+          <div class="border-t border-white/30 pt-5">
+            <h4 class="text-xl font-semibold mb-3">Technology</h4>
+            <p class="leading-relaxed text-white/85">A shared dashboard brings planting schedules, harvest reporting, forecasts, weather conditions and advisory into view.</p>
+          </div>
+          <div class="border-t border-white/30 pt-5">
+            <h4 class="text-xl font-semibold mb-3">Agronomy</h4>
+            <p class="leading-relaxed text-white/85">Agronomic visits, soil testing and sensor readings guide the crop programme and soil correction plan for each parcel.</p>
+          </div>
+          <div class="border-t border-white/30 pt-5">
+            <h4 class="text-xl font-semibold mb-3">Management</h4>
+            <p class="leading-relaxed text-white/85">A dedicated farm manager coordinates the crop calendar, input procurement, quality and day-to-day operations.</p>
+          </div>
+          <div class="border-t border-white/30 pt-5">
+            <h4 class="text-xl font-semibold mb-3">Offtake</h4>
+            <p class="leading-relaxed text-white/85">Our market relationships connect produce with buyers. Where possible, produce is contracted before harvest.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 border-t border-white/30 pt-10">
+        <h3 class="text-3xl md:text-4xl font-semibold text-[#A9E000] mb-8">Start with a conversation.</h3>
+        <ol class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <li><span class="text-[#A9E000] text-sm tracking-widest">01</span><p class="text-lg mt-3">Share your investment interests or parcel details for a land assessment.</p></li>
+          <li><span class="text-[#A9E000] text-sm tracking-widest">02</span><p class="text-lg mt-3">Review the proposed operating plan, costs and projected economics with our team.</p></li>
+          <li><span class="text-[#A9E000] text-sm tracking-widest">03</span><p class="text-lg mt-3">Agree the partnership terms and onboarding plan before operations begin.</p></li>
+        </ol>
       </div>
     </section>
 
@@ -1037,85 +989,64 @@
       </div>
     </section>
 
-    <!-- What We Grow -->
-    <section id="produce" class="bg-[#A9E000] py-20 px-4 md:px-10 lg:px-20">
-      <p
-        class="reveal-fade text-sm md:text-base tracking-[0.3em] uppercase mb-4"
-      >
-        From Our Greenhouses
-      </p>
-      <h2
-        class="reveal text-5xl md:text-7xl lg:text-8xl font-semibold leading-tight tracking-[-0.5px] mb-12"
-      >
-        Precision growing, built for market demand.
-      </h2>
-      <div class="space-y-8">
-        <div
-          class="reveal-x group flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12 border-t border-black pt-6"
-        >
-          <div class="w-full md:w-1/4">
-            <span class="text-[16px] md:text-[18px] font-light"
-              >Grown to grade</span
-            >
-            <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold mt-1">
-              Coloured capsicum
-            </h3>
-          </div>
-          <p class="w-full md:w-1/2 text-[16px] md:text-[18px] lg:text-[20px]">
-            Trellised, drip-fed and picked by colour and size against the
-            buyer's grade sheet.
-          </p>
-          <img
-            src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=1080&q=80"
-            alt="Yellow peppers"
-            loading="lazy"
-            class="w-full h-[200px] md:w-[250px] md:h-[150px] object-cover transition duration-500 group-hover:scale-105 group-hover:rotate-1 group-hover:shadow-xl"
-          />
-        </div>
-        <div
-          class="reveal-x group flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12 border-t border-black pt-6"
-        >
-          <div class="w-full md:w-1/4">
-            <span class="text-[16px] md:text-[18px] font-light"
-              >Year-round supply</span
-            >
-            <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold mt-1">
-              Cucumber
-            </h3>
-          </div>
-          <p class="w-full md:w-1/2 text-[16px] md:text-[18px] lg:text-[20px]">
-            Staggered planting under cover keeps volumes steady outside the
-            open-field season.
-          </p>
-          <img
-            src="https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=1080&q=80"
-            alt="Cucumbers"
-            loading="lazy"
-            class="w-full h-[200px] md:w-[250px] md:h-[150px] object-cover transition duration-500 group-hover:scale-105 group-hover:rotate-1 group-hover:shadow-xl"
-          />
-        </div>
-        <div
-          class="reveal-x group flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12 border-t border-black pt-6"
-        >
-          <div class="w-full md:w-1/4">
-            <span class="text-[16px] md:text-[18px] font-light"
-              >Grown for drying</span
-            >
-            <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold mt-1">
-              Herbs &amp; botanicals
-            </h3>
-          </div>
-          <p class="w-full md:w-1/2 text-[16px] md:text-[18px] lg:text-[20px]">
-            Aromatics destined for tea manufacturers, spice blenders and
-            value-addition companies.
-          </p>
-          <img
-            src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1080&q=80"
-            alt="Dried hibiscus flowers and herbs"
-            loading="lazy"
-            class="w-full h-[200px] md:w-[250px] md:h-[150px] object-cover transition duration-500 group-hover:scale-105 group-hover:rotate-1 group-hover:shadow-xl"
-          />
-        </div>
+    <!-- Our Tech -->
+    <section id="our-tech" class="bg-[#005840] text-white py-20 px-6 md:px-10 lg:px-20">
+      <p class="text-[#A9E000] text-sm tracking-[0.3em] uppercase mb-4">Our Technology</p>
+      <h2 class="text-[#A9E000] text-4xl md:text-6xl font-semibold max-w-4xl mb-12">Precision growing, built for market demand.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="border-t border-white/30 pt-6">
+          <p class="text-[#A9E000] mb-3">Every farm, one view</p>
+          <h3 class="text-2xl font-semibold mb-4">Management dashboard</h3>
+          <p class="text-lg leading-relaxed text-white/85">Tracks every greenhouse and farm in real time, from planting to harvest and delivery.</p>
+        </article>
+        <article class="border-t border-white/30 pt-6">
+          <p class="text-[#A9E000] mb-3">Plan ahead</p>
+          <h3 class="text-2xl font-semibold mb-4">AI</h3>
+          <p class="text-lg leading-relaxed text-white/85">Forecasts harvests and sets planting schedules so supply matches what buyers need.</p>
+        </article>
+        <article class="border-t border-white/30 pt-6">
+          <p class="text-[#A9E000] mb-3">Live field data</p>
+          <h3 class="text-2xl font-semibold mb-4">IoT sensors</h3>
+          <p class="text-lg leading-relaxed text-white/85">Monitor soil moisture, acidity and humidity around the clock, so crops get what they need when they need it.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Buy Produce -->
+    <section id="produce" class="bg-[#A9E000] py-20 px-6 md:px-10 lg:px-20">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4">From Our Greenhouses</p>
+      <h2 class="text-5xl md:text-7xl font-semibold mb-6">Buy Our Produce</h2>
+      <p class="text-lg md:text-2xl max-w-4xl mb-12 leading-relaxed">Grown in our greenhouses under hands-on management, our produce is fresh, consistent in quality and available all year round.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        <article class="border-t border-[#005840]/40 pt-6">
+          <span class="text-sm tracking-widest">01</span>
+          <h3 class="text-2xl md:text-3xl font-semibold mt-2 mb-3">English Cucumber</h3>
+          <p class="text-lg leading-relaxed max-w-xl">Long, crisp and seedless-tasting, with a smooth, thin skin. Greenhouse-grown for uniform size and shape.</p>
+        </article>
+        <article class="border-t border-[#005840]/40 pt-6">
+          <span class="text-sm tracking-widest">02</span>
+          <h3 class="text-2xl md:text-3xl font-semibold mt-2 mb-3">Yellow Capsicum</h3>
+          <p class="text-lg leading-relaxed max-w-xl">Bright, sweet and crunchy. Harvested at full colour for the best flavour.</p>
+        </article>
+        <article class="border-t border-[#005840]/40 pt-6">
+          <span class="text-sm tracking-widest">03</span>
+          <h3 class="text-2xl md:text-3xl font-semibold mt-2 mb-3">Red Capsicum</h3>
+          <p class="text-lg leading-relaxed max-w-xl">Rich red, sweet and firm. Picked fully ripe for maximum taste and shelf appeal.</p>
+        </article>
+        <article class="border-t border-[#005840]/40 pt-6">
+          <span class="text-sm tracking-widest">04</span>
+          <h3 class="text-2xl md:text-3xl font-semibold mt-2 mb-3">Asparagus</h3>
+          <p class="text-lg leading-relaxed max-w-xl">Tender, fresh spears, harvested and packed quickly to keep them crisp.</p>
+        </article>
+        <article class="border-t border-[#005840]/40 pt-6">
+          <span class="text-sm tracking-widest">05</span>
+          <h3 class="text-2xl md:text-3xl font-semibold mt-2 mb-3">Cherry Tomatoes</h3>
+          <p class="text-lg leading-relaxed max-w-xl">Small, sweet and juicy. Grown in controlled conditions for steady quality every harvest.</p>
+        </article>
+      </div>
+      <div class="mt-12 border-t border-[#005840]/40 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <p class="text-xl font-medium">Year-round supply, consistent quality, delivered fresh</p>
+        <a href="mailto:admin@chasingsun.africa?subject=Produce%20order%20enquiry" class="inline-block w-fit whitespace-nowrap rounded-full bg-[#005840] px-6 py-3 text-white font-semibold hover:bg-[#005840]/90">Request a Quote &rarr;</a>
       </div>
     </section>
 
@@ -1182,176 +1113,7 @@
       </div>
     </section>
 
-    <div
-      class="marquee-wrap overflow-hidden bg-[#005840] text-[#A9E000] py-5 border-y border-black/10"
-      aria-hidden="true"
-    >
-      <div
-        class="marquee-rev flex w-max whitespace-nowrap text-2xl md:text-4xl font-semibold uppercase tracking-wide"
-      >
-        <span class="mx-8 inline-flex items-center gap-8"
-          >Coloured capsicum<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Cucumber<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Ginger<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Hibiscus<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Chamomile<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Herbs &amp; botanicals<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Traceable<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Year round<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Coloured capsicum<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Cucumber<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Ginger<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Hibiscus<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Chamomile<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Herbs &amp; botanicals<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Traceable<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg></span
-        ><span class="mx-8 inline-flex items-center gap-8"
-          >Year round<svg
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"
-            /></svg
-        ></span>
-      </div>
-    </div>
+
 
     <!-- Farm Gallery -->
     <section id="gallery" class="bg-[#005840] py-20 px-4 md:px-12">
@@ -1486,7 +1248,7 @@
           <p
             class="reveal-fade text-sm md:text-base tracking-[0.3em] uppercase mb-4"
           >
-            Help &amp; Contact
+            Work With Us
           </p>
           <h2
             class="reveal text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-[-1px]"
@@ -1640,23 +1402,23 @@
             <ul class="space-y-2 text-white/80">
               <li>
                 <a
-                  href="#horticulture"
+                  href="#produce"
                   class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
-                  >Horticulture</a
+                  >Buy Produce</a
                 >
               </li>
               <li>
                 <a
-                  href="#commodity-trading"
+                  href="https://commodities.chasingsun.africa"
                   class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
-                  >Commodity Trade</a
+                  >Buy Commodities</a
                 >
               </li>
               <li>
                 <a
-                  href="#farm-dashboard"
+                  href="#our-tech"
                   class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
-                  >Farm Dashboard</a
+                  >Our Tech</a
                 >
               </li>
             </ul>
@@ -1672,7 +1434,7 @@
                 <a
                   href="#produce"
                   class="inline-block transition duration-300 hover:text-[#A9E000] hover:translate-x-1.5"
-                  >What We Grow</a
+                  >Buy Produce</a
                 >
               </li>
               <li>
@@ -1754,5 +1516,12 @@
         </a>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll('nav[aria-label="Mobile navigation"] a').forEach((link) => {
+        link.addEventListener('click', () => {
+          document.getElementById('nav-toggle').checked = false;
+        });
+      });
+    </script>
   </body>
 </html>

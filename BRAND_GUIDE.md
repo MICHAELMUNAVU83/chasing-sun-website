@@ -85,6 +85,7 @@ Example: “Grown under cover and harvested to specification” is preferred to
 ## Asset implementation
 
 The website colour and type tokens live in the Tailwind configuration inside
-`index.html`. The current hero uses `images/greenhouse/hero-golden-hour-v2.webp`.
+`index.html`. The current hero uses `images/greenhouse/ai-vineyard-golden-hour.webp`.
+The vineyard is an illustrative AI-generated scene, disclosed in its alt text.
 AI-generated project assets use the `ai-` filename prefix. Update this guide and
 the implementation together when the system changes.
