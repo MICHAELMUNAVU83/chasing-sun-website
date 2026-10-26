@@ -65,7 +65,7 @@ Invest in a managed greenhouse or bring your own land into production. Chasing S
 ## AUM Options (`#aum-options`)
 
 - **Headline:** Your land or capital. Our growing expertise.
-- **Intro:** Chasing Sun brings land, growers and markets together through a professionally managed farming system. Choose a managed greenhouse in Kedong, put your own arable land to work, or invest in the company behind the operation.
+- **Intro:** Chasing Sun brings land, growers and markets together through a professionally managed farming system. Choose between managed greenhouses on our farm or generating income from your own arable land.
 
 ### AUM Investment in Kedong (`#aum-kedong`)
 
