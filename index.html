@@ -680,15 +680,21 @@
       <dl class="mx-auto grid max-w-6xl grid-cols-1 gap-8 text-center md:grid-cols-3">
         <div>
           <dt class="text-base md:text-lg">Customers Serviced</dt>
-          <dd class="mt-2 text-5xl md:text-6xl font-semibold">100+</dd>
+          <dd class="mt-2 text-5xl md:text-6xl font-semibold tabular-nums">
+            <span data-count-up="100">100</span>+
+          </dd>
         </div>
         <div>
           <dt class="text-base md:text-lg">Produced Monthly</dt>
-          <dd class="mt-2 text-5xl md:text-6xl font-semibold">20+ <span class="text-2xl">MT</span></dd>
+          <dd class="mt-2 text-5xl md:text-6xl font-semibold tabular-nums">
+            <span data-count-up="20">20</span>+ <span class="text-2xl">MT</span>
+          </dd>
         </div>
         <div>
           <dt class="text-base md:text-lg">Traded Monthly</dt>
-          <dd class="mt-2 text-5xl md:text-6xl font-semibold">50+ <span class="text-2xl">MT</span></dd>
+          <dd class="mt-2 text-5xl md:text-6xl font-semibold tabular-nums">
+            <span data-count-up="50">50</span>+ <span class="text-2xl">MT</span>
+          </dd>
         </div>
       </dl>
     </section>
@@ -1522,6 +1528,44 @@
           document.getElementById('nav-toggle').checked = false;
         });
       });
+
+      const counters = document.querySelectorAll('[data-count-up]');
+
+      if (
+        'IntersectionObserver' in window &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ) {
+        counters.forEach((counter) => {
+          counter.textContent = '0';
+        });
+
+        const counterObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              const counter = entry.target;
+              const target = Number(counter.dataset.countUp);
+              const duration = 1400;
+              const startTime = performance.now();
+
+              const updateCounter = (currentTime) => {
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const easedProgress = 1 - Math.pow(1 - progress, 3);
+                counter.textContent = Math.round(target * easedProgress);
+
+                if (progress < 1) requestAnimationFrame(updateCounter);
+              };
+
+              requestAnimationFrame(updateCounter);
+              observer.unobserve(counter);
+            });
+          },
+          { threshold: 0.5 },
+        );
+
+        counters.forEach((counter) => counterObserver.observe(counter));
+      }
     </script>
   </body>
 </html>
