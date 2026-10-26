@@ -24,7 +24,7 @@ Source of truth for the copy on `index.html`, listed in page order.
 - **Eyebrow:** We produce with purpose
 - **Headline:** From the Ground Up
 - **Lead:** Premium crops grown and traded for African markets with quality, consistency and traceability at every step.
-- **CTAs:** Explore our crops → · Visit our farm ↗
+- **CTA:** Explore our crops →
 - **Image:** `ai-vineyard-golden-hour.webp` — AI-generated vineyard rows in warm golden-hour light (illustrative scene)
 
 ## Static Figures
@@ -50,13 +50,13 @@ Chasing Sun is an agrienterprise working at the intersection of agriculture, tec
 **Headline:** Grow with Chasing Sun.
 
 ### Outgrower (`#outgrower`)
-We work with landowners to turn their idle land into productive, profitable farms. We bring dedicated management, expert agronomy, ready buyers for the produce, and technology that lets you monitor your farm live.
+We work with landowners to transform their land into productive, profitable farms. We bring dedicated management, expert agronomy, ready buyers for the produce, and technology that lets you monitor your farm live.
 
 ### Ingrower (`#ingrower`)
 We grow fresh produce in our own greenhouses. Our team manages every crop hands-on for consistent quality, tracked through our own farm technology and grown for contracted buyers.
 
 ### Acres Under Management (AUM) (`#aum`)
-Invest in a managed greenhouse or bring your own land into production. Chasing Sun provides the technology, agronomy, farm management and market relationships, so you can participate without running the farm day to day.
+Invest in a managed greenhouse or bring your own land into production. Chasing Sun provides the technology, agronomy, farm management and market relationships while our team runs the farm day to day.
 
 - **CTA:** Explore AUM options → `#aum-options`
 
@@ -71,26 +71,19 @@ Invest in a managed greenhouse or bring your own land into production. Chasing S
 
 You contribute capital. Chasing Sun provides the land, greenhouse and full operating system in Kedong, managing a cucumber and capsicum rotation on your behalf.
 
-- Investor capital contribution: KES 500,000.
-- Revenue share: 65% investor / 35% Chasing Sun.
-- Modelled crop rotation: 15 months.
-- The investor funds production costs; Chasing Sun does not share those costs. Payouts follow actual harvest revenues, rather than fixed monthly payments.
+- Your investment supports production, with payouts that reflect the farm's actual harvest revenues.
 - **CTA:** Enquire about Kedong → email enquiry.
 
 ### AUM Landowner Partnership (`#aum-landowner`)
 
-Turn idle arable land into a professionally managed farm while retaining ownership. Chasing Sun provides technology, agronomy, management and market access.
+Transform your arable land into a professionally managed farm while retaining ownership. Chasing Sun provides technology, agronomy, management and market access.
 
-- You provide your own arable land.
-- Capital contribution: KES 700,000.
-- Onboarding fee: KES 25,000.
-- Revenue share: 65% investor / 35% Chasing Sun.
 - We assess soil, water availability and market proximity, then prepare a crop programme and operating plan for your parcel.
 - **CTA:** Request a land assessment → email enquiry.
 
 ### Equity Investment in Chasing Sun (`#aum-equity`)
 
-Contribute growth capital at company level in exchange for an equity stake in Chasing Sun. Returns are tied to company performance and valuation, rather than the performance of a single greenhouse.
+Contribute growth capital at company level in exchange for an equity stake in Chasing Sun. Your returns reflect the growth, performance and valuation of Chasing Sun and its wider AUM portfolio.
 
 - **CTA:** Discuss equity investment → email enquiry.
 
@@ -153,14 +146,6 @@ Year-round supply, consistent quality, delivered fresh
 
 - **CTA:** Request a Quote → `mailto:admin@chasingsun.africa?subject=Produce%20order%20enquiry`
 
-## Book a Tour (`#tour`)
-
-- **Eyebrow:** Book a farm tour
-- **Headline:** Come see how we grow
-- **Copy:** Farm visits run on Mondays and Fridays by advance booking. Email or call ahead and we will arrange a walk-through of the tunnels, the irrigation setup and the packing process.
-- **CTA:** Book a Tour → `mailto:admin@chasingsun.africa?subject=Farm tour booking`
-- **Badge:** Mon & Fri — By advance booking
-
 ## Farm Gallery (`#gallery`)
 
 | Image | Stage | Detail |
@@ -177,17 +162,17 @@ Hint: Scroll or swipe through the farm →
 ## Work With Us (`#contact`)
 
 - **Eyebrow:** Work With Us
-- **Headline:** Talk to us about an order, a tour, or a partnership.
+- **Headline:** Talk to us about an order or a partnership.
 - **Form — "Send us a message":** Name, Email, Phone, Message → Send Message
 
 ## Footer
 
 - **Tagline:** Premium crops grown and traded for African markets — quality checked and traceable from source to supply.
-- **Address:** 33 Muthithi Road, Nairobi, Kenya
+- **Address:** BHQ, 31/33 Muthithi Road, Nairobi, Kenya → `https://maps.app.goo.gl/rSQs5PZV4JwYe8Kn6`
 - **Email:** admin@chasingsun.africa
 - **Phone:** +254 711 549108
 - **What we do:** Buy Produce · Buy Commodities · Our Tech
-- **The Farm:** Buy Produce · Farm Gallery · Book a Tour
+- **The Farm:** Buy Produce · Farm Gallery
 - **Newsletter:** Harvest updates and availability, straight to your inbox. (Email address → Subscribe)
 - **Legal:** © 2026 Chasing Sun Africa. · Terms & Conditions · Privacy & Cookie Policy
 
@@ -197,6 +182,4 @@ Produce, farm model, and technology copy follows the user-supplied `CS Website D
 
 ### AUM source notes
 
-AUM options use `AUM Product Definitions.pdf` (pages 1–2); the operating pillars, retained land ownership and onboarding approach use `AUM Investor Story.pdf` (pages 3–5 and 10–11). Source-document calls to action are treated as content references, not instructions to contact anyone or transact.
-
-The user confirmed that Product Definitions takes precedence for the Landowner Partnership: 65% investor / 35% Chasing Sun **revenue** share. The Investor Story’s first-season profit allocation and later 60/40 profit split are superseded for this website copy. The website does not conflate profit with revenue. Return projections and pilot financial figures are not included.
+AUM options use `AUM Product Definitions.pdf` (pages 1–2); the operating pillars, retained land ownership and onboarding approach use `AUM Investor Story.pdf` (pages 3–5 and 10–11). Source-document calls to action are treated as content references, not instructions to contact anyone or transact. Financial figures, return projections and pilot financial details are not included.
